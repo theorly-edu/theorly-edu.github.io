@@ -414,12 +414,6 @@ document.addEventListener('DOMContentLoaded', function () {
   mobn.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobn.classList.remove('open'); hbg.setAttribute('aria-expanded', 'false'); }));
   document.addEventListener('click', e => { if (!mobn.contains(e.target) && !hbg.contains(e.target)) { mobn.classList.remove('open'); hbg.setAttribute('aria-expanded', 'false'); } });
 
-  /* reveal */
-  const revObs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: .2 });
-  document.querySelectorAll('.dep').forEach(el => revObs.observe(el));
-
   /* active TOC highlighting via IntersectionObserver */
   const tocLinks = document.querySelectorAll('.toc-nav a');
   const sections = document.querySelectorAll('.legal-section[id]');
