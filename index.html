@@ -1,632 +1,1706 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>THEORLY — Learn by Building</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      <title>THEORLY — Learn by Building</title>
 
-  <!-- Primary Meta -->
-  <meta name="title" content="THEORLY | Learn by Building">
-  <meta name="description" content="THEORLY is an AI-powered learning ecosystem where students in Grades 8–12 learn by building real projects, guided by Noelle, their AI learning companion. Missions in AI, cybersecurity, and programming.">
-  <meta name="keywords" content="Learn by Building, AI Learning Companion, Student Missions, Project-Based Education, AI for Students, Cybersecurity for Students, Programming for Students">
+      <!-- Primary Meta -->
+      <meta name="title" content="THEORLY | Learn by Building">
+      <meta name="description" content="THEORLY is an AI-powered learning ecosystem where students in Grades 8–12 learn by building real projects, guided by Noelle, their AI learning companion. Missions in AI, cybersecurity, and programming.">
+      <meta name="keywords" content="Learn by Building, AI Learning Companion, Student Missions, Project-Based Education, AI for Students, Cybersecurity for Students, Programming for Students">
 
-  <!-- Mobile Optimization -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Mobile Optimization -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Search Engine -->
-  <meta name="robots" content="index, follow">
+      <!-- Search Engine -->
+      <meta name="robots" content="index, follow">
 
-  <!-- Open Graph (Social Preview) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="THEORLY | Learn by Building">
-  <meta property="og:description" content="An AI-powered learning ecosystem where students build real projects, guided by Noelle, their AI learning companion.">
-  <meta property="og:image" content="https://theorly.in/theorly.jpg">
-  <meta property="og:url" content="https://theorly.in">
+      <!-- Open Graph (Social Preview) -->
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="THEORLY | Learn by Building">
+      <meta property="og:description" content="An AI-powered learning ecosystem where students build real projects, guided by Noelle, their AI learning companion.">
+      <meta property="og:image" content="https://theorly.in/theorly.jpg">
+      <meta property="og:url" content="https://theorly.in">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="THEORLY | Learn by Building">
-  <meta name="twitter:description" content="Students learn by building real projects, guided by Noelle, their AI learning companion.">
-  <meta name="twitter:image" content="https://theorly.in/theorly.jpg">
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="THEORLY | Learn by Building">
+      <meta name="twitter:description" content="Students learn by building real projects, guided by Noelle, their AI learning companion.">
+      <meta name="twitter:image" content="https://theorly.in/theorly.jpg">
 
-  <meta name="theme-color" content="#F7F1E8">
-  <link rel="icon" href="theorly.jpg" type="image/jpeg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css">
-</head>
+    <!-- Performance: Preconnect to font domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Site Navigation -->
+    <header class="site-header" id="header">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a href="#" class="brand-logo" id="brand-logo" aria-label="Theorly Home">
+          <span class="brand-text">Theorly</span>
+          <!-- Mascot Character Logo -->
+          <svg class="brand-mascot" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Flower Pot on Back -->
+            <path d="M38 18L44 19L41 28L35 27L38 18Z" fill="#7C3AED" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M40 12L42 18" stroke="#00F0AD" stroke-width="2" stroke-linecap="round"/>
+            <!-- Flower on top -->
+            <path d="M43 11L44.5 13.5L47 13L45.5 15.5L47 18L44.5 17.5L43 20L41.5 17.5L39 18L40.5 15.5L39 13L41.5 13.5L43 11Z" fill="#C4F934" stroke="#111827" stroke-width="1.5" stroke-linejoin="round"/>
+            <!-- Mascot Yellow Body -->
+            <path d="M12 36C8 34 8 28 11 22C14 16 20 12 28 12C36 12 40 16 40 22C40 26 38 32 37 36C36 40 33 44 26 44C18 44 14 41 12 36Z" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- Cute Tail -->
+            <path d="M10 32C6 34 4 39 8 42C11 44 14 42 14 39" fill="#C4F934" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- Face features -->
+            <circle cx="27" cy="20" r="2.2" fill="#111827"/>
+            <circle cx="34" cy="21" r="2.2" fill="#111827"/>
+            <path d="M29 25C31 27 33 27 34 25" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+            <!-- Little front arms -->
+            <path d="M33 29C36 30 38 32 37 35" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- Feet -->
+            <path d="M22 43V47C22 48.5 24 49 26 49C28 49 29 48 29 46V43" fill="#C4F934" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M32 42V46C32 47.5 34 48 36 48C38 48 39 47 39 45V41" fill="#C4F934" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+          </svg>
+        </a>
 
-<body>
+        <!-- Center Menu -->
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#what-is-theorly" class="nav-link">What is Theorly</a></li>
+          <li><a href="#learning-by-building" class="nav-link">How It Works</a></li>
+          <li><a href="#learning-paths" class="nav-link">Courses</a></li>
+          <li><a href="#noelle" class="nav-link">Noelle AI</a></li>
+          <li><a href="#schools" class="nav-link">For Schools</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li class="mobile-nav-action-item">
+            <a href="#login" class="mobile-nav-btn-login">Log in</a>
+            <a href="#signup" class="mobile-nav-btn-signup">Sign up free</a>
+          </li>
+        </ul>
 
-<div id="scroll-progress"></div>
-
-<!-- ─── DOT NAV ─── -->
-<div id="dot-nav">
-  <div class="dn-item" data-sec="hero" title="Home"></div>
-  <div class="dn-item" data-sec="why" title="Why THEORLY"></div>
-  <div class="dn-item" data-sec="who-dark" title="Meet Noelle"></div>
-  <div class="dn-item" data-sec="missions" title="Missions"></div>
-  <div class="dn-item" data-sec="schools" title="For Schools"></div>
-  <div class="dn-item" data-sec="faq" title="FAQ"></div>
-  <div class="dn-item" data-sec="cta" title="Join"></div>
-</div>
-
-<!-- ─── NAVBAR ─── -->
-<nav id="mainNav">
-  <div class="container nav-inner">
-    <a href="index.html" class="logo"><div class="logo-mark">T</div>THEORLY</a>
-    <div class="nav-center">
-      <a href="about.html">About</a>
-      <a href="#missions">Missions</a>
-      <a href="#schools">For Schools</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="nav-right">
-      <a href="https://learn.theorly.in" class="btn-login" target="_blank" rel="noopener noreferrer">Login</a>
-      <button class="btn-nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Join Waitlist →</button>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    </div>
-  </div>
-  <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-content">
-      <a href="about.html">About</a>
-      <a href="#missions">Missions</a>
-      <a href="#schools">For Schools</a>
-      <a href="#contact">Contact</a>
-      <a href="https://learn.theorly.in" target="_blank" rel="noopener noreferrer">Login</a>
-      <a href="#cta" class="mob-cta">Join Waitlist</a>
-    </div>
-  </div>
-</nav>
-
-<!-- ═══ HERO ═══ -->
-<section class="hero" id="hero">
-  <div class="hero-mesh"></div>
-  <div class="hero-orb orb-1"></div>
-  <div class="hero-orb orb-2"></div>
-  <div class="container">
-    <div class="hero-grid">
-
-      <div class="hero-left">
-        <div class="hero-badge"><span class="badge-dot"></span>Learn by Building</div>
-        <h1>Learn skills that <span class="hl-lime">shape tomorrow.</span></h1>
-        <p class="hero-subp">THEORLY is a different kind of learning experience — students build real-world skills in <strong>AI, cybersecurity, and programming</strong>, guided by Noelle, an AI learning companion.</p>
-        <div class="hero-actions">
-          <a href="#missions" class="btn btn-signal magnetic ripple-tgt">Explore Missions</a>
-          <a href="#schools" class="btn btn-ghost magnetic">For Schools ↓</a>
-        </div>
-        <div class="trust-badges">
-          <span class="trust-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Grades 8–12</span>
-          <span class="trust-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Real Projects</span>
-          <span class="trust-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>AI-Guided</span>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-item"><div class="stat-number" data-target="3" data-suffix="">3</div><div class="stat-label">Mission Tracks</div></div>
-          <div class="stat-item"><div class="stat-number">12–18</div><div class="stat-label">Age Group</div></div>
-          <div class="stat-item"><div class="stat-number" data-target="100" data-suffix="%">100%</div><div class="stat-label">Built by Doing</div></div>
+        <!-- Nav Actions -->
+        <div class="nav-actions">
+          <a href="#login" class="btn-login" id="btn-login">Log in</a>
+          <a href="#signup" class="btn-signup" id="btn-signup">
+            <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0L14.4 7.6L22 4.4L16.4 12L24 14.4L16.4 16.8L22 24.4L14.4 21.2L12 28.8L9.6 21.2L2 24.4L7.6 16.8L0 14.4L7.6 12L2 4.4L9.6 7.6L12 0Z"/>
+            </svg>
+            Sign up
+          </a>
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
+            <svg class="menu-icon-bars" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg class="menu-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
         </div>
       </div>
+    </header>
 
-      <div class="hero-right">
-        <div class="hv-panel reveal d2">
-          <div class="hv-bar">
-            <span class="hv-dot r"></span><span class="hv-dot y"></span><span class="hv-dot g"></span>
-            <span class="hv-ttl">theorly — my_mission.jsx</span>
-          </div>
-          <div class="hv-body">
-            <div class="hv-minis">
-              <div class="hv-mini">
-                <span class="hv-lbl">Mission</span>
-                <span class="hv-val lime">AI</span>
-                <span class="hv-sub">Build Your First AI</span>
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="container hero-grid">
+          <!-- Left Column -->
+          <div class="hero-content">
+            <!-- Playful floating top scribble / handwritten annotation -->
+            <div class="hand-annotation hero-hand-note" style="top: -28px; left: 8px; transform: rotate(-3deg);">
+              <span>✦ no boring theory!</span>
+              <svg width="28" height="20" viewBox="0 0 28 20" fill="none" class="curved-doodle-arrow">
+                <path d="M4 4C10 14 18 16 24 12M24 12L19 10M24 12L22 17" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <h1 class="hero-title">
+              Learn <span class="highlight-marker">skills</span><br />
+              that shape<br />
+              <span class="hero-title-highlight">
+                tomorrow.
+                <svg class="hero-star-sparkle" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 0L19.2 10.1L29.3 5.9L21.9 16L32 19.2L21.9 22.4L29.3 32.5L19.2 28.3L16 38.4L12.8 28.3L2.7 32.5L10.1 22.4L0 19.2L10.1 16L2.7 5.9L12.8 10.1L16 0Z" fill="#C4F934"/>
+                </svg>
+              </span>
+            </h1>
+            <p class="hero-description">
+              AI, Programming, Cybersecurity and Future Skills courses for school students. Learn. Practice. Build real projects. Get certified.
+            </p>
+
+            <div class="hero-cta-group" style="position: relative;">
+              <a href="#start" class="btn-cta-primary" id="btn-start-learning">
+                <svg class="star-icon" viewBox="0 0 24 24">
+                  <path d="M12 0L14.4 7.6L22 4.4L16.4 12L24 14.4L16.4 16.8L22 24.4L14.4 21.2L12 28.8L9.6 21.2L2 24.4L7.6 16.8L0 14.4L7.6 12L2 4.4L9.6 7.6L12 0Z"/>
+                </svg>
+                Start learning free
+              </a>
+              <a href="#courses" class="link-explore" id="link-explore-courses">
+                Explore courses
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+
+              <!-- Handwritten badge next to CTA -->
+              <span class="hand-annotation purple" style="left: 230px; bottom: -24px; transform: rotate(-2deg);">
+                <svg width="24" height="20" viewBox="0 0 24 20" fill="none">
+                  <path d="M20 16C14 6 8 8 3 14M3 14L8 15M3 14L4 9" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                100% free for students
+              </span>
+            </div>
+
+            <!-- Learning Pillar / Student Focus -->
+            <div class="hero-learning-pillar" id="hero-learning-pillar">
+              <div class="pillar-badge-item">
+                <span class="pillar-sparkle">✦</span>
+                <span>Practical future skills for school students &amp; beginners</span>
               </div>
-              <div class="hv-mini">
-                <span class="hv-lbl">Guide</span>
-                <span class="hv-val lav">Noelle</span>
-                <span class="hv-sub">Reviewing your build</span>
+            </div>
+          </div>
+
+          <!-- Right Bento Visual Grid -->
+          <div class="hero-visual-bento">
+            <!-- Top Floating Squiggle Doodle -->
+            <svg class="hero-doodle-top" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 28C10 20 12 12 16 8" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+              <path d="M26 30C28 18 32 8 38 4" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+              <path d="M42 26C45 18 48 12 52 8" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+
+            <!-- Card 1: Lavender (Left) -->
+            <div class="bento-card-lavender" id="card-build-practice">
+              <div class="card-heading-group">
+                <div class="card-heading">
+                  Build.<br />
+                  Practice.<br />
+                  Level up.
+                </div>
+                <div class="card-lavender-tag">
+                  <span class="pulse-dot"></span> 50+ Interactive Quests
+                </div>
+              </div>
+
+              <!-- Sparkle Star -->
+              <svg class="sparkle-doodle" viewBox="0 0 24 24" fill="none">
+                <path d="M12 0L13.8 8.2L22 10L13.8 11.8L12 20L10.2 11.8L2 10L10.2 8.2L12 0Z" fill="#111827"/>
+              </svg>
+
+              <!-- Mascot on Unicorn Float Illustration -->
+              <div class="mascot-illustration">
+                <svg viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Unicorn pool float base -->
+                  <ellipse cx="85" cy="130" rx="48" ry="24" fill="#FFFFFF" stroke="#111827" stroke-width="2.5"/>
+                  <!-- Unicorn Head -->
+                  <path d="M115 130C125 125 132 115 130 98C128 88 122 84 116 86C112 88 110 94 110 102L112 125" fill="#FFFFFF" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                  <!-- Unicorn Horn -->
+                  <path d="M126 86L138 68L120 80" fill="#C4F934" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+                  <!-- Unicorn Mane & details -->
+                  <path d="M114 88C110 82 108 85 106 92" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="123" cy="94" r="2" fill="#111827"/>
+                  <!-- Mascot sitting inside -->
+                  <path d="M60 120C54 112 56 95 68 85C80 75 92 80 96 92C100 104 95 116 90 122" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                  <!-- Mascot Face -->
+                  <circle cx="76" cy="94" r="2.2" fill="#111827"/>
+                  <circle cx="84" cy="93" r="2.2" fill="#111827"/>
+                  <path d="M78 99C80 101 82 101 84 99" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Mascot Arms holding purple gear / star -->
+                  <path d="M72 104L80 114L90 106" fill="#111827" stroke="#111827" stroke-width="2"/>
+                  <circle cx="81" cy="110" r="10" fill="#111827"/>
+                  <path d="M81 104L83 108L87 106L85 110L89 112L85 114L87 118L83 116L81 120L79 116L75 118L77 114L73 112L77 110L75 106L79 108L81 104Z" fill="#7C3AED"/>
+                  <!-- Little green legs kicking -->
+                  <path d="M96 118C104 120 110 128 108 134" stroke="#C4F934" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M96 118C104 120 110 128 108 134" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
               </div>
             </div>
-            <div class="hv-card">
-              <span class="hv-lbl">Mission Progress</span>
-              <div class="hv-row"><span>Build Your First AI</span><div class="hv-track"><div class="hv-fill f-lime" data-w="72"></div></div><em>72%</em></div>
-              <div class="hv-row"><span>Create a Secure Website</span><div class="hv-track"><div class="hv-fill f-sky" data-w="45"></div></div><em>45%</em></div>
-              <div class="hv-row"><span>Design Your Own App</span><div class="hv-track"><div class="hv-fill f-lav" data-w="88"></div></div><em>88%</em></div>
+
+            <!-- Card 2: Center Lime AI Fundamentals (Big Illustration) -->
+            <div class="bento-card-lime" id="card-ai-fundamentals">
+              <div class="lime-card-header">
+                <span class="badge-new">New</span>
+                <div class="lime-card-title">
+                  <span class="title-bold">AI Fundamentals</span>
+                  <span class="title-light">Course</span>
+                </div>
+              </div>
+
+              <!-- Student with Laptop Photo Wrapper -->
+              <div class="lime-photo-wrapper">
+                <picture>
+                  <source srcset="./assets/boy-Photoroom.webp" type="image/webp" />
+                  <img 
+                    src="./assets/boy-Photoroom-opt.png" 
+                    alt="Student learning AI on laptop" 
+                    class="lime-student-photo" 
+                    width="340" 
+                    height="340" 
+                    decoding="async" 
+                    fetchpriority="high"
+                  />
+                </picture>
+              </div>
             </div>
-            <div class="hv-code"><span class="ck">const</span> nextStep = <span class="cf">askNoelle</span>(<span class="cs">'what should I try next?'</span>)<span class="code-cur"></span></div>
-            <div class="hv-foot"><span class="hv-pill">Mission In Progress</span></div>
-          </div>
-        </div>
-      </div>
 
-    </div>
-  </div>
-</section>
+            <!-- Card Column 3: Stacked Right Cards -->
+            <div class="bento-col-right">
+              <!-- Top Card: Sand / Badges -->
+              <div class="bento-card-sand" id="card-challenges-badges">
+                <div class="card-heading">
+                  Solve<br />
+                  challenges.<br />
+                  Earn badges.
+                </div>
 
-<div class="section-sep" id="sep1"></div>
+                <!-- Mascot Hugging Unicorn & Shield -->
+                <div class="mascot-illustration">
+                  <svg viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Unicorn Head / Body -->
+                    <path d="M95 95C95 65 105 45 118 42C124 40 130 44 128 55C126 65 120 85 125 98" fill="#FFFFFF" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                    <path d="M125 40L135 22L120 35" fill="#C4F934" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+                    <circle cx="120" cy="50" r="2" fill="#111827"/>
+                    <!-- Mascot Body -->
+                    <path d="M45 95C38 85 42 62 55 52C68 42 78 52 82 68C86 82 80 94 75 98" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                    <circle cx="58" cy="62" r="2.2" fill="#111827"/>
+                    <circle cx="66" cy="62" r="2.2" fill="#111827"/>
+                    <path d="M60 67C62 69 64 69 66 67" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/>
+                    <!-- Feet -->
+                    <path d="M50 96V104H58V96" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                    <path d="M68 96V104H76V96" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                    <!-- Purple Shield with Star -->
+                    <path d="M72 68C82 68 88 74 88 84C88 94 78 102 72 104C66 102 56 94 56 84C56 74 62 68 72 68Z" fill="#111827" stroke="#111827" stroke-width="2.5"/>
+                    <path d="M72 74C78 74 82 78 82 84C82 90 76 96 72 98C68 96 62 90 62 84C62 78 66 74 72 74Z" fill="#7C3AED"/>
+                    <path d="M72 78L73.5 82L77 80.5L74.5 84L78 86L74 87.5L75 91L72 88.5L69 91L70 87.5L66 86L69.5 84L67 80.5L70.5 82L72 78Z" fill="#C4F934"/>
+                    <!-- Sparkle Stars -->
+                    <path d="M142 65L144 71L150 73L144 75L142 81L140 75L134 73L140 71L142 65Z" fill="#111827"/>
+                    <path d="M130 95L131.5 99L135 100.5L131.5 102L130 106L128.5 102L125 100.5L128.5 99L130 95Z" fill="#111827"/>
+                  </svg>
+                </div>
+              </div>
 
-<!-- ═══ WHY THEORLY ═══ -->
-<section class="section" id="why">
-  <div class="container">
-    <div class="eyebrow reveal">What Makes Us Different</div>
-    <h2 class="section-title reveal d1">Learning by building, not watching</h2>
-    <p class="section-sub reveal d2">THEORLY isn't a course library. It's a place where students learn by creating something real, with an AI companion beside them the whole way.</p>
-    <div class="why-grid">
-      <div class="f-card fc-lime reveal">
-        <div class="f-icon fi-lime"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <h3>Learn by Building</h3>
-        <p>Every Mission is centered on creating something real — a model, a website, an app — because concepts stick when you build them.</p>
-      </div>
-      <div class="f-card fc-lav reveal d1">
-        <div class="f-icon fi-lav"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
-        <h3>Guided by Noelle</h3>
-        <p>An AI companion that asks better questions, offers hints, and helps students reason through problems — without doing the work for them.</p>
-      </div>
-      <div class="f-card fc-sky reveal d2">
-        <div class="f-icon fi-sky"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-        <h3>Certification That Means Something</h3>
-        <p>Certificates are earned by completing authentic work, not by finishing videos — recognition of skills actually demonstrated.</p>
-      </div>
-      <div class="f-card fc-ink reveal d3">
-        <div class="f-icon fi-ink"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Small, Focused Groups</h3>
-        <p>Cohorts stay small so every student gets real attention, real feedback, and room to think independently.</p>
-      </div>
-    </div>
-  </div>
-</section>
+              <!-- Bottom Card: Dark / Projects -->
+              <div class="bento-card-dark" id="card-create-projects">
+                <div class="card-heading">
+                  Create<br />
+                  projects.<br />
+                  Showcase<br />
+                  your skills.
+                </div>
 
-<div class="section-sep" id="sep2"></div>
-
-<!-- ═══ MEET NOELLE ═══ -->
-<section class="dark-section" id="who-dark">
-  <div class="spotlight" id="sp2"></div>
-  <div class="container">
-    <div class="who-layout">
-      <div>
-        <span class="dk-eyebrow reveal">Your AI Learning Companion</span>
-        <h2 class="reveal d1">Meet Noelle™</h2>
-        <p class="dk-lead reveal d2">Future skills for real life — with an AI mentor that teaches you to think, not to follow.</p>
-        <div class="who-list">
-          <div class="who-item reveal d1"><span class="who-num">01</span><div><h4>She asks, rather than tells</h4><p>When a student gets stuck, Noelle asks better questions instead of handing over the answer.</p></div></div>
-          <div class="who-item reveal d2"><span class="who-num">02</span><div><h4>She reviews the work</h4><p>Noelle looks at what a student built, points out what's working, and suggests what to try next.</p></div></div>
-          <div class="who-item reveal d3"><span class="who-num">03</span><div><h4>She helps them think</h4><p>Debugging, reflecting, improving — Noelle is there to help students reason it out themselves.</p></div></div>
-        </div>
-      </div>
-      <div class="noelle-panel reveal d2">
-        <div class="np-bar">
-          <span class="hv-dot r"></span><span class="hv-dot y"></span><span class="hv-dot g"></span>
-          <span class="np-ttl">theorly — chat_with_noelle.jsx</span>
-        </div>
-        <div class="np-body">
-          <div class="np-msg"><span class="np-q">Noelle</span>Good question. Before I answer — what have you already tried, and what did you notice?</div>
-          <div class="np-list">
-            <div class="np-item"><span class="np-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Thinking through problems</div>
-            <div class="np-item"><span class="np-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Reviewing your build</div>
-            <div class="np-item"><span class="np-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Debugging together</div>
-          </div>
-        </div>
-        <div class="np-foot">
-          <a href="#missions" class="np-link">Meet Noelle <span>→</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ MISSIONS (Tabbed) ═══ -->
-<section class="section" id="missions">
-  <div class="container">
-    <div class="reveal">
-      <div class="eyebrow">Missions</div>
-      <h2 class="section-title">Choose What You'll Build</h2>
-      <p class="section-sub">Structured learning journeys built around creating something real. No prior experience needed — just curiosity.</p>
-    </div>
-    <div class="prog-tabs-row reveal d1">
-      <button class="ptab active" data-tab="ai">Build Your First AI</button>
-      <button class="ptab" data-tab="cyber">Create a Secure Website</button>
-      <button class="ptab" data-tab="code">Design Your Own App</button>
-    </div>
-    <div class="prog-panels">
-      <!-- AI panel -->
-      <div class="prog-panel active" data-panel="ai">
-        <div class="pc-vis pc-vis-ai">
-          <div class="pc-glow g-ai"></div>
-          <div class="pc-vis-inner pv-ai"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg><span>Build Your First AI</span></div>
-          <div class="pc-badges-wrap"><span class="pbg pbg-ai">Beginner</span><span class="pbg pbg-ai">12 Weeks</span><span class="pbg pbg-ai">Small Groups</span></div>
-        </div>
-        <div class="pc-info">
-          <div class="pc-eyebrow">Mission · AI</div>
-          <h3>Build Your First AI</h3>
-          <p>Learn how machine learning actually works by training a real model — from raw data to something that makes predictions. Noelle guides you through every decision along the way.</p>
-          <div class="pc-curr"><h4>How the Mission Unfolds</h4><div class="pc-week-list">
-            <div class="pc-week pw-ai"><span class="pc-wk">Wk 1–2</span>What Is AI, Really?</div>
-            <div class="pc-week pw-ai"><span class="pc-wk">Wk 3–5</span>Collecting &amp; Shaping Your Data</div>
-            <div class="pc-week pw-ai"><span class="pc-wk">Wk 6–8</span>Training Your First Model</div>
-            <div class="pc-week pw-ai"><span class="pc-wk">Wk 9–11</span>Ethics &amp; Responsible AI</div>
-            <div class="pc-week pw-ai"><span class="pc-wk">Wk 12</span>Ship It &amp; Earn Your Certificate</div>
-          </div></div>
-          <div class="pc-actions"><button class="btn-enrol ripple-tgt magnetic" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Start This Mission</button><a href="course.html" class="btn-syl">See the Full Outline</a></div>
-        </div>
-      </div>
-      <!-- Cyber panel -->
-      <div class="prog-panel" data-panel="cyber">
-        <div class="pc-vis pc-vis-cyber">
-          <div class="pc-glow g-cyber"></div>
-          <div class="pc-vis-inner pv-cyber"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Create a Secure Website</span></div>
-          <div class="pc-badges-wrap"><span class="pbg pbg-cyber">Beginner</span><span class="pbg pbg-cyber">12 Weeks</span><span class="pbg pbg-cyber">Small Groups</span></div>
-        </div>
-        <div class="pc-info">
-          <div class="pc-eyebrow">Mission · Security</div>
-          <h3>Create a Secure Website</h3>
-          <p>Build a real website, then learn to defend it. Students discover how digital systems are attacked and protected by securing something they made themselves.</p>
-          <div class="pc-curr"><h4>How the Mission Unfolds</h4><div class="pc-week-list">
-            <div class="pc-week pw-cyber"><span class="pc-wk">Wk 1–2</span>Digital Threats &amp; Fundamentals</div>
-            <div class="pc-week pw-cyber"><span class="pc-wk">Wk 3–5</span>Building the Site &amp; Securing It</div>
-            <div class="pc-week pw-cyber"><span class="pc-wk">Wk 6–8</span>Ethical Hacking &amp; Threat Labs</div>
-            <div class="pc-week pw-cyber"><span class="pc-wk">Wk 9–11</span>Incident Response &amp; Policy</div>
-            <div class="pc-week pw-cyber"><span class="pc-wk">Wk 12</span>Security Audit &amp; Certificate</div>
-          </div></div>
-          <div class="pc-actions"><button class="btn-enrol ripple-tgt magnetic" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Start This Mission</button><a href="course.html" class="btn-syl">See the Full Outline</a></div>
-        </div>
-      </div>
-      <!-- Code panel -->
-      <div class="prog-panel" data-panel="code">
-        <div class="pc-vis pc-vis-code">
-          <div class="pc-glow g-code"></div>
-          <div class="pc-vis-inner pv-code"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><span>Design Your Own App</span></div>
-          <div class="pc-badges-wrap"><span class="pbg pbg-code">Beginner</span><span class="pbg pbg-code">10 Weeks</span><span class="pbg pbg-code">Small Groups</span></div>
-        </div>
-        <div class="pc-info">
-          <div class="pc-eyebrow">Mission · Code</div>
-          <h3>Design Your Own App</h3>
-          <p>Learn computational thinking and programming fundamentals by designing and building an app from an idea you actually care about.</p>
-          <div class="pc-curr"><h4>How the Mission Unfolds</h4><div class="pc-week-list">
-            <div class="pc-week pw-code"><span class="pc-wk">Wk 1–2</span>Computational Thinking &amp; Logic</div>
-            <div class="pc-week pw-code"><span class="pc-wk">Wk 3–5</span>Variables, Functions &amp; Control Flow</div>
-            <div class="pc-week pw-code"><span class="pc-wk">Wk 6–8</span>Data Structures &amp; Building Features</div>
-            <div class="pc-week pw-code"><span class="pc-wk">Wk 9</span>Building Your App</div>
-            <div class="pc-week pw-code"><span class="pc-wk">Wk 10</span>Ship It &amp; Earn Your Certificate</div>
-          </div></div>
-          <div class="pc-actions"><button class="btn-enrol ripple-tgt magnetic" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Start This Mission</button><a href="course.html" class="btn-syl">See the Full Outline</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-sep" id="sep3"></div>
-
-<!-- ═══ FOR SCHOOLS ═══ -->
-<section class="section" id="schools">
-  <div class="container">
-    <div class="schools-layout">
-      <div class="reveal">
-        <div class="eyebrow">Institutions</div>
-        <h2 class="section-title">Designed for Schools</h2>
-        <p class="section-desc">THEORLY partners with schools to bring Learn by Building into the classroom — alongside traditional academics, not in place of them.</p>
-        <a href="#contact" class="btn btn-signal ripple-tgt magnetic">Partner With Us <span>›</span></a>
-        <div class="stepper">
-          <p class="stepper-ttl">How it works</p>
-          <div class="step-tabs">
-            <div class="step-tab active" data-s="0">Register</div>
-            <div class="step-tab" data-s="1">Pilot</div>
-            <div class="step-tab" data-s="2">Rollout</div>
-            <div class="step-tab" data-s="3">Certify</div>
-          </div>
-          <div class="step-panels">
-            <div class="step-panel active" data-s="0"><strong>School Registration</strong><p>Your school signs up and completes an onboarding call. We assess cohort size, timetable, and the best-fit Mission track.</p></div>
-            <div class="step-panel" data-s="1"><strong>Pilot Cohort Launch</strong><p>A focused pilot with a small group of students. The school receives a progress report at the end.</p></div>
-            <div class="step-panel" data-s="2"><strong>Full Program Rollout</strong><p>We scale to the full program — integrated into your schedule with minimal disruption and dedicated THEORLY instructors.</p></div>
-            <div class="step-panel" data-s="3"><strong>Certificates Issued</strong><p>Each student who completes authentic work receives a THEORLY certificate recognizing the skills they demonstrated.</p></div>
-          </div>
-        </div>
-        <div class="schools-stats">
-          <div class="school-stat"><div class="school-stat-num">3</div><div class="school-stat-label">Mission Tracks</div></div>
-          <div class="school-stat"><div class="school-stat-num">8–12</div><div class="school-stat-label">Grades</div></div>
-          <div class="school-stat"><div class="school-stat-num">Small</div><div class="school-stat-label">Cohort Sizes</div></div>
-        </div>
-      </div>
-
-      <div class="partner-panel reveal d1">
-        <div class="partner-panel-header">
-          <span class="partner-panel-label">Partnership Model</span>
-          <span class="accepting-badge">Now Partnering With Schools</span>
-        </div>
-        <div class="partnership-item">
-          <div class="pi-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-          <div class="pi-body"><h4>School Integration</h4><p>Programs delivered alongside existing curriculum with minimal disruption.</p></div>
-        </div>
-        <div class="partnership-item">
-          <div class="pi-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <div class="pi-body"><h4>Future Skills Exposure</h4><p>Early exposure to AI, cybersecurity, and programming before higher education.</p></div>
-        </div>
-        <div class="partnership-item">
-          <div class="pi-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <div class="pi-body"><h4>Scalable Implementation</h4><p>Flexible programs for any school size — pilots to institution-wide rollouts.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FAQ ═══ -->
-<section class="section" id="faq" style="background:linear-gradient(180deg,transparent,#F2EADB)">
-  <div class="container">
-    <div class="eyebrow reveal" style="justify-content:center">FAQ</div>
-    <h2 class="section-title reveal d1" style="text-align:center;margin-bottom:46px">Frequently Asked Questions</h2>
-    <div class="faq-list">
-      <div class="faq-item reveal"><div class="faq-q" tabindex="0">What is a Mission?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">A Mission is a structured learning journey built around creating something real — like training your first AI model or building a secure website — rather than watching videos or completing quizzes.</div></div></div>
-      <div class="faq-item reveal d1"><div class="faq-q" tabindex="0">Who is Noelle?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">Noelle™ is THEORLY's AI learning companion. She's not a chatbot that hands out answers — she asks questions, offers hints, and helps students think through problems as they build.</div></div></div>
-      <div class="faq-item reveal d2"><div class="faq-q" tabindex="0">Do students need prior coding experience?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">No prior experience is required. Each Mission starts with foundational concepts and builds progressively as students create their project.</div></div></div>
-      <div class="faq-item reveal d3"><div class="faq-q" tabindex="0">How are certificates earned?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">Certificates are earned by completing authentic work — the project a student actually builds — not by finishing a set of videos.</div></div></div>
-      <div class="faq-item reveal d4"><div class="faq-q" tabindex="0">How are Missions conducted?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">In small, focused cohorts for real attention and mentorship. Missions are delivered on-campus in partnership with schools, or in a hybrid format.</div></div></div>
-      <div class="faq-item reveal d4"><div class="faq-q" tabindex="0">How can my school partner with THEORLY?<span class="faq-icon">+</span></div><div class="faq-a"><div class="faq-a-inner">Email hello@theorly.in or use the Partner button in the Schools section. We'll schedule an intro call and talk through what a pilot could look like for your school.</div></div></div>
-    </div>
-  </div>
-</section>
-
-<div class="section-sep" id="sep5"></div>
-
-<!-- ═══ CTA ═══ -->
-<section id="cta">
-  <div class="container">
-    <div class="cta-wrapper reveal">
-      <div class="cta-block">
-        <div class="cta-in">
-          <div class="cta-urgency">Learn by Building</div>
-          <h2>Start Your First Mission</h2>
-          <p>Join the waitlist to hear when THEORLY is ready to welcome new students — and be part of a different way to learn.</p>
-          <div class="wl-form">
-            <div class="wl-input-wrap">
-              <input type="email" id="wl-email" class="wl-input" placeholder="Enter your email address" autocomplete="email">
-              <span class="wl-ind" id="wl-ind"></span>
+                <!-- Mascot Stacking Blocks Illustration -->
+                <div class="mascot-illustration">
+                  <svg viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Project Blocks -->
+                    <rect x="78" y="78" width="22" height="22" rx="4" fill="#7C3AED" stroke="#0B251B" stroke-width="2"/>
+                    <rect x="104" y="70" width="26" height="30" rx="4" fill="#C4F934" stroke="#0B251B" stroke-width="2"/>
+                    <rect x="88" y="58" width="18" height="18" rx="3" fill="#00F0AD" stroke="#0B251B" stroke-width="2"/>
+                    <!-- Sparkle accents -->
+                    <path d="M60 82L54 78" stroke="#C4F934" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M58 88L50 88" stroke="#C4F934" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M60 94L54 98" stroke="#C4F934" stroke-width="2" stroke-linecap="round"/>
+                    <!-- Mascot kneeling / building -->
+                    <path d="M125 55C135 55 142 65 142 78C142 90 134 98 120 98C110 98 108 92 108 84C108 72 115 55 125 55Z" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                    <circle cx="120" cy="65" r="2.2" fill="#111827"/>
+                    <circle cx="128" cy="66" r="2.2" fill="#111827"/>
+                    <path d="M122 72C124 74 126 74 128 72" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+                    <!-- Hands placing block -->
+                    <path d="M112 76L102 74" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+                    <!-- Sparkles in dark -->
+                    <path d="M138 42C140 40 142 40 144 42" stroke="#C4F934" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M148 48C150 48 152 48 154 48" stroke="#C4F934" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
             </div>
-            <button class="btn-wl ripple-tgt" id="wl-btn">Join Waitlist</button>
           </div>
-          <p class="cta-note">No spam. Unsubscribe anytime.</p>
+        </div>
+      </section>
+
+      <!-- =========================================
+           2. WHAT IS THEORLY? (Core Product Overview & 4-Step Flow)
+           ========================================= -->
+      <section class="what-is-theorly-section" id="what-is-theorly">
+        <div class="container">
+          
+          <!-- Header -->
+          <div class="what-theorly-header">
+            <div class="what-theorly-eyebrow">
+              <span class="what-theorly-tag">✦ WHAT IS THEORLY?</span>
+            </div>
+            <h2 class="what-theorly-title">
+              A practical learning platform for <span class="highlight-marker">future skills</span>
+            </h2>
+            <p class="what-theorly-subtitle">
+              Theorly helps school students build future-ready skills through interactive courses, hands-on projects, real-world challenges, and guided AI mentoring.
+            </p>
+          </div>
+
+          <!-- 4-Step Visual Flow: LEARN -> BUILD -> PRACTICE -> PROVE -->
+          <div class="what-theorly-flow-grid">
+            
+            <!-- Step 1: LEARN -->
+            <div class="theorly-flow-step" id="flow-step-learn">
+              <div class="step-num-badge">01</div>
+              <div class="step-icon-circle yellow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+              <h3 class="step-title">1. Learn</h3>
+              <p class="step-desc">Interactive, bite-sized lessons in AI, Python, cybersecurity, and modern web development.</p>
+            </div>
+
+            <!-- Step 2: BUILD -->
+            <div class="theorly-flow-step" id="flow-step-build">
+              <div class="step-num-badge">02</div>
+              <div class="step-icon-circle lime">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="step-title">2. Build</h3>
+              <p class="step-desc">Turn concepts into tangible projects immediately in browser-based coding labs.</p>
+            </div>
+
+            <!-- Step 3: PRACTICE -->
+            <div class="theorly-flow-step" id="flow-step-practice">
+              <div class="step-num-badge">03</div>
+              <div class="step-icon-circle lavender">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="step-title">3. Practice</h3>
+              <p class="step-desc">Solve skill missions, test edge cases, and level up with step-by-step guidance from Noelle.</p>
+            </div>
+
+            <!-- Step 4: PROVE -->
+            <div class="theorly-flow-step" id="flow-step-prove">
+              <div class="step-num-badge">04</div>
+              <div class="step-icon-circle sand">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 15l-2 5l4-2l4 2l-2-5"></path>
+                  <circle cx="12" cy="8" r="7"></circle>
+                </svg>
+              </div>
+              <h3 class="step-title">4. Prove</h3>
+              <p class="step-desc">Publish verified capstone projects to a live portfolio and earn recognized credentials.</p>
+            </div>
+
+          </div>
+
+          <!-- Integrated Stats Row -->
+          <div class="what-theorly-stats-bar">
+            <div class="theorly-mini-stat">
+              <span class="stat-number">100+</span>
+              <span class="stat-text">Interactive quests</span>
+            </div>
+            <div class="theorly-stat-divider"></div>
+            <div class="theorly-mini-stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-text">Project labs</span>
+            </div>
+            <div class="theorly-stat-divider"></div>
+            <div class="theorly-mini-stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-text">Skill missions</span>
+            </div>
+            <div class="theorly-stat-divider"></div>
+            <div class="theorly-mini-stat">
+              <span class="stat-number">4</span>
+              <span class="stat-text">Career pathways</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================
+           3. LEARNING BY BUILDING (Our Core Philosophy & Asymmetric Posters)
+           ========================================= -->
+      <section class="theorly-campaign-section" id="learning-by-building">
+        <div class="container">
+          
+          <!-- Top Header -->
+          <div class="campaign-intro">
+            <div class="campaign-tag-row">
+              <span class="campaign-hand-tag">✦ OUR PHILOSOPHY</span>
+            </div>
+            <h2 class="campaign-headline">
+              Learning by <span class="chalk-highlight">building</span>, not watching.
+            </h2>
+            <p class="campaign-lead">
+              Theorly isn't a passive video library. Every session starts with an idea and ends with working code, live projects, or trained AI models.
+            </p>
+          </div>
+
+          <!-- Editorial Campaign Poster Composition (3 Asymmetric Bold Visual Blocks) -->
+          <div class="campaign-composition">
+
+            <!-- BLOCK 1: LEARN BY BUILDING (Big Lime Organic Block) -->
+            <div class="campaign-block block-lime">
+              <!-- Subtle Handcrafted Corner Marks -->
+              <svg class="block-corner-doodle doodle-top-right" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                <!-- Tiny sketchy swirl / loop -->
+                <path d="M 6 36 C 8 18 24 8 34 14 C 42 19 36 32 25 30 C 18 28 19 18 26 16 C 30 15 34 18 36 22" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+              <div class="block-top">
+                <span class="block-num">01</span>
+                <span class="block-hand-note">create &gt; watch</span>
+              </div>
+              <div class="block-body">
+                <h3 class="block-title">
+                  Learn by building
+                  <!-- Little hand-drawn underline squiggle -->
+                  <svg class="title-squiggle-accent" width="36" height="8" viewBox="0 0 36 8" fill="none">
+                    <path d="M 2 4 Q 8 1 14 4 T 26 4 T 34 4" stroke="#0D2625" stroke-width="2.2" stroke-linecap="round"/>
+                  </svg>
+                </h3>
+                <p class="block-text">
+                  Students create real things instead of simply watching lessons. Every session starts with an idea and ends with working code, AI models, or live web projects.
+                </p>
+              </div>
+              <!-- Graphic: Playful Construction Doodles -->
+              <div class="block-graphic">
+                <svg viewBox="0 0 220 80" width="100%" height="80" fill="none">
+                  <!-- Sketchy Hammer / Wrench Doodle -->
+                  <path d="M 20 60 L 55 25" stroke="#0D2625" stroke-width="4" stroke-linecap="round"/>
+                  <rect x="45" y="10" width="26" height="20" rx="6" fill="#0D2625" transform="rotate(45 45 10)"/>
+                  <!-- Flying Spark Doodles -->
+                  <path d="M 90 25 L 90 15 M 105 30 L 115 22 M 100 45 L 110 50" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Hand-drawn arrow -->
+                  <path d="M 130 50 C 150 40 170 55 195 30 M 195 30 L 180 30 M 195 30 L 195 45" stroke="#0D2625" stroke-width="2.5" stroke-linecap="round"/>
+                  <!-- Tiny note -->
+                  <text x="135" y="70" font-family="'Caveat', cursive" font-size="17" font-weight="700" fill="#0D2625">from day one ✦</text>
+                  <!-- Handcrafted star spark -->
+                  <path d="M 15 18 L 17 12 L 19 18 L 25 20 L 19 22 L 17 28 L 15 22 L 9 20 Z" fill="#7C3AED" opacity="0.8"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- BLOCK 2: GUIDED BY NOELLE (Lavender Block with Noelle Artwork) -->
+            <div class="campaign-block block-lavender">
+              <!-- Subtle Handcrafted Corner Marks -->
+              <svg class="block-corner-doodle doodle-top-left" width="38" height="38" viewBox="0 0 38 38" fill="none">
+                <!-- Playful hand-drawn crosshatch / asterisk spark -->
+                <path d="M 8 19 L 30 19 M 19 8 L 19 30 M 11 11 L 27 27 M 27 11 L 11 27" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" opacity="0.65"/>
+              </svg>
+
+              <div class="block-top">
+                <span class="block-num">02</span>
+                <span class="block-hand-note">always curious ✦</span>
+              </div>
+              <div class="block-body">
+                <h3 class="block-title">
+                  Guided by Noelle
+                  <svg class="title-sparkle-inline" width="18" height="18" viewBox="0 0 24 24" fill="#7C3AED">
+                    <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+                  </svg>
+                </h3>
+                <p class="block-text">
+                  Noelle helps students think, experiment, and solve problems. She doesn't just hand out answers — she asks the questions that spark breakthroughs.
+                </p>
+              </div>
+              <!-- Graphic: Cute Noelle Companion Art with handcrafted floating sparks -->
+              <div class="block-graphic noelle-companion-art">
+                <svg viewBox="0 0 160 110" width="160" height="110" fill="none">
+                  <!-- Noelle Cloud Body -->
+                  <path d="M 35 75 C 20 75 15 55 30 40 C 25 20 50 10 70 25 C 90 10 110 30 105 50 C 120 65 105 85 85 80 C 70 90 45 90 35 75 Z" fill="#FFFFFF" stroke="#111827" stroke-width="2.5"/>
+                  <!-- Lavender Headband with Lime Earcups -->
+                  <path d="M 40 30 C 40 10 95 10 95 30" stroke="#7C3AED" stroke-width="4" stroke-linecap="round"/>
+                  <rect x="33" y="26" width="10" height="18" rx="4" fill="#C4F934" stroke="#111827" stroke-width="1.5"/>
+                  <rect x="92" y="26" width="10" height="18" rx="4" fill="#C4F934" stroke="#111827" stroke-width="1.5"/>
+                  <!-- Friendly Eyes & Cheeks -->
+                  <circle cx="56" cy="48" r="3.5" fill="#111827"/>
+                  <circle cx="76" cy="48" r="3.5" fill="#111827"/>
+                  <path d="M 62 58 Q 66 63 70 58" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/>
+                  <circle cx="50" cy="54" r="3" fill="#F87171" opacity="0.6"/>
+                  <circle cx="82" cy="54" r="3" fill="#F87171" opacity="0.6"/>
+                  <!-- Floating Idea Sparkle -->
+                  <path d="M 125 25 L 132 15 L 139 25 L 149 32 L 139 39 L 132 49 L 125 39 L 115 32 Z" fill="#C4F934" stroke="#111827" stroke-width="1.5"/>
+                  <!-- Subtle mini doodle loop near Noelle -->
+                  <path d="M 115 65 Q 125 55 135 68 T 150 65" stroke="#7C3AED" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- BLOCK 3: PROOF OF SKILL & SMALL GROUPS (Deep Teal Wide Foundation Block) -->
+            <div class="campaign-block block-teal">
+              <!-- Subtle Background Hand-Drawn Constellation Marks -->
+              <svg class="block-teal-decor" width="100%" height="100%" viewBox="0 0 900 240" fill="none" preserveAspectRatio="none">
+                <!-- Floating hand-drawn doodle star in subtle teal tint -->
+                <path d="M 440 25 L 443 17 L 446 25 L 454 28 L 446 31 L 443 39 L 440 31 L 432 28 Z" fill="#C4F934" opacity="0.6"/>
+                <!-- Curved dashed sketch trail -->
+                <path d="M 410 180 Q 450 210 490 180" stroke="#EFE8FF" stroke-width="1.6" stroke-dasharray="4 4" opacity="0.4"/>
+              </svg>
+              
+              <!-- Sub-column A: Proof of Skill -->
+              <div class="block-subcol">
+                <div class="block-top">
+                  <span class="block-num light">03</span>
+                  <span class="block-hand-note light">show, don't tell</span>
+                </div>
+                <h3 class="block-title light">
+                  Proof of skill
+                  <svg class="title-star-mini" width="16" height="16" viewBox="0 0 20 20" fill="#C4F934">
+                    <polygon points="10,1 12.8,7 19,7.8 14.5,12.2 15.6,18.5 10,15.2 4.4,18.5 5.5,12.2 1,7.8 7.2,7"/>
+                  </svg>
+                </h3>
+                <p class="block-text light">
+                  Finished projects become living evidence of what students can actually do. Build games, train neural nets, and publish sites that speak for themselves.
+                </p>
+                <div class="pill-badge-hand light">
+                  <span>✦ real portfolio, not certificates on paper</span>
+                  <!-- Tiny sketched underline vector -->
+                  <svg width="40" height="6" viewBox="0 0 40 6" fill="none">
+                    <path d="M 2 3 Q 12 5 22 2 T 38 4" stroke="#C4F934" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Organic Divider Line with Hand-Drawn Notch -->
+              <div class="block-subcol-divider"></div>
+
+              <!-- Sub-column B: Small, Focused Groups -->
+              <div class="block-subcol">
+                <div class="block-top">
+                  <span class="block-num light">04</span>
+                  <span class="block-hand-note light">human &amp; connected</span>
+                </div>
+                <h3 class="block-title light">
+                  Small, focused groups
+                  <svg class="title-heart-mini" width="15" height="15" viewBox="0 0 24 24" fill="#FED7AA">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </h3>
+                <p class="block-text light">
+                  Students receive meaningful feedback and individual attention in tight-knit cohorts where curiosity is celebrated and questions are encouraged.
+                </p>
+                <div class="pill-badge-hand light">
+                  <span>✦ room to think &amp; experiment</span>
+                  <svg width="24" height="12" viewBox="0 0 24 12" fill="none">
+                    <path d="M 2 6 C 8 2 16 2 22 8 M 22 8 L 17 7 M 22 8 L 20 4" stroke="#FED7AA" stroke-width="1.6" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Bottom Playful Tagline / Scribble Signature -->
+          <div class="campaign-footer-doodle">
+            <span class="doodle-text">Built for young minds who want to invent the future</span>
+            <svg width="60" height="20" viewBox="0 0 60 20" fill="none">
+              <path d="M2 12C15 3 45 3 58 12M58 12L48 8M58 12L52 18" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =========================================
+           4. COURSES / LEARNING PATHS (Popular Tracks)
+           ========================================= -->
+      <section class="paths-section" id="learning-paths">
+        <div class="container">
+          <div class="paths-header">
+            <div>
+              <div class="hand-annotation" style="position: relative; margin-bottom: 4px; transform: rotate(-2deg);">
+                <span>🚀 choose your track</span>
+              </div>
+              <h2 class="paths-title">Popular learning paths</h2>
+            </div>
+            <a href="#all-paths" class="paths-view-all" id="link-view-all-paths">
+              View all
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Grid of 4 Learning Paths -->
+          <div class="paths-grid">
+            <!-- Path Card 1: AI & Machine Learning -->
+            <div class="path-card track-ai" id="path-ai">
+              <div class="path-card-top">
+                <span class="path-badge">Beginner</span>
+                <span class="pill-badge-hand" style="font-family: var(--font-hand); font-size: 16px; font-weight: 700;">✦ Foundation</span>
+              </div>
+              <h3 class="path-card-title">AI for Everyone</h3>
+              <p class="path-card-desc">Understand AI, build smart projects and explore the future.</p>
+
+              <!-- Mascot & Brain Illustration -->
+              <div class="path-illustration">
+                <svg viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Glowing Purple Brain -->
+                  <path d="M50 65C45 55 50 42 62 42C70 42 74 48 76 52C78 46 86 42 94 45C102 48 106 58 102 68C108 72 108 82 102 90C95 98 84 96 80 94C76 98 66 98 58 92C50 86 48 75 50 65Z" fill="#7C3AED" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                  <!-- Sulci -->
+                  <path d="M64 56C68 62 68 72 62 78" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M78 52C82 62 80 76 74 84" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M88 56C94 64 92 78 86 86" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Mascot Standing Beside Brain -->
+                  <path d="M125 45C138 45 146 58 145 74C144 88 135 98 122 98C112 98 108 90 108 82C108 68 114 45 125 45Z" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                  <circle cx="120" cy="58" r="2.2" fill="#111827"/>
+                  <circle cx="128" cy="59" r="2.2" fill="#111827"/>
+                  <path d="M122 66C124 68 126 68 128 66" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/>
+                  <!-- Feet -->
+                  <path d="M116 97V104H124V97" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                  <path d="M130 97V104H138V97" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                  <!-- Sparkle Star -->
+                  <path d="M152 42L154 47L159 48.5L154 50L152 55L150 50L145 48.5L150 47L152 42Z" fill="#111827"/>
+                </svg>
+              </div>
+
+              <div class="path-footer">
+                <span class="path-courses-count">6 Courses</span>
+                <button class="path-arrow-btn" aria-label="Open AI for Everyone Course">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Path Card 2: Programming & Dev -->
+            <div class="path-card track-code" id="path-python">
+              <div class="path-card-top">
+                <span class="path-badge">Beginner</span>
+                <span class="pill-badge-hand" style="font-family: var(--font-hand); font-size: 16px; font-weight: 700;">✦ Core Code</span>
+              </div>
+              <h3 class="path-card-title">Python Programming</h3>
+              <p class="path-card-desc">Learn Python from basics to build real world apps.</p>
+
+              <!-- Mascot at Laptop Illustration -->
+              <div class="path-illustration">
+                <svg viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Purple Laptop -->
+                  <path d="M72 82L80 62H108L100 82H72Z" fill="#7C3AED" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+                  <path d="M65 82H112L116 88H60L65 82Z" fill="#6D28D9" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+                  <!-- Code on screen -->
+                  <circle cx="86" cy="72" r="1.5" fill="#FFFFFF"/>
+                  <circle cx="92" cy="72" r="1.5" fill="#FFFFFF"/>
+                  <!-- Mascot typing -->
+                  <path d="M130 52C142 52 148 64 148 78C148 92 138 98 124 98C112 98 108 90 108 80C108 66 118 52 130 52Z" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                  <circle cx="124" cy="62" r="2.2" fill="#111827"/>
+                  <circle cx="132" cy="63" r="2.2" fill="#111827"/>
+                  <path d="M126 70C128 72 130 72 132 70" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/>
+                  <!-- Arms to keyboard -->
+                  <path d="M116 78L102 82" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+                  <!-- Feet -->
+                  <path d="M118 97V104H126V97" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                  <path d="M132 97V104H140V97" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                  <!-- Sparkle Star -->
+                  <path d="M152 46L154 51L159 52.5L154 54L152 59L150 54L145 52.5L150 51L152 46Z" fill="#111827"/>
+                </svg>
+              </div>
+
+              <div class="path-footer">
+                <span class="path-courses-count">8 Courses</span>
+                <button class="path-arrow-btn" aria-label="Open Python Programming Course">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Path Card 3: Cybersecurity -->
+            <div class="path-card track-security" id="path-cybersecurity">
+              <div class="path-card-top">
+                <span class="path-badge">Intermediate</span>
+                <span class="pill-badge-hand" style="font-family: var(--font-hand); font-size: 16px; font-weight: 700;">✦ Security</span>
+              </div>
+              <h3 class="path-card-title">Cybersecurity Essentials</h3>
+              <p class="path-card-desc">Learn to protect systems and stay cyber safe.</p>
+
+              <!-- Mascot with Lock Shield Illustration -->
+              <div class="path-illustration">
+                <svg viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Mascot Body -->
+                  <path d="M118 48C130 48 138 60 138 76C138 90 128 98 115 98C105 98 100 90 100 80C100 66 108 48 118 48Z" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                  <circle cx="114" cy="58" r="2.2" fill="#111827"/>
+                  <circle cx="122" cy="59" r="2.2" fill="#111827"/>
+                  <path d="M116 66C118 68 120 68 122 66" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/>
+                  <!-- Feet -->
+                  <path d="M108 97V104H116V97" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                  <path d="M124 97V104H132V97" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                  <!-- Electric Cobalt Security Shield with Lock -->
+                  <path d="M136 62C148 62 156 70 156 82C156 94 144 104 136 106C128 104 116 94 116 82C116 70 124 62 136 62Z" fill="#1D4ED8" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                  <!-- Padlock on Shield -->
+                  <rect x="130" y="80" width="12" height="10" rx="2" fill="#C4F934" stroke="#111827" stroke-width="1.8"/>
+                  <path d="M132 80V76C132 73.8 133.8 72 136 72C138.2 72 140 73.8 140 76V80" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="136" cy="85" r="1" fill="#111827"/>
+                  <!-- Sparkle Star -->
+                  <path d="M160 44L161.5 48L165 49.5L161.5 51L160 55L158.5 51L155 49.5L158.5 48L160 44Z" fill="#111827"/>
+                </svg>
+              </div>
+
+              <div class="path-footer">
+                <span class="path-courses-count">6 Courses</span>
+                <button class="path-arrow-btn" aria-label="Open Cybersecurity Essentials Course">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Path Card 4: Future Skills & Web -->
+            <div class="path-card track-future" id="path-web-dev">
+              <div class="path-card-top">
+                <span class="path-badge">Beginner</span>
+                <span class="pill-badge-hand" style="font-family: var(--font-hand); font-size: 16px; font-weight: 700;">✦ Future Tech</span>
+              </div>
+              <h3 class="path-card-title">Future Skills & Web</h3>
+              <p class="path-card-desc">Build creative web apps, interactive tech and future projects.</p>
+
+              <!-- Mascot with Browser / Code Tablet Illustration -->
+              <div class="path-illustration">
+                <svg viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Mascot Body -->
+                  <path d="M125 45C138 45 146 58 145 74C144 88 135 98 122 98C112 98 108 90 108 82C108 68 114 45 125 45Z" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                  <circle cx="120" cy="58" r="2.2" fill="#111827"/>
+                  <circle cx="128" cy="59" r="2.2" fill="#111827"/>
+                  <path d="M122 66C124 68 126 68 128 66" stroke="#111827" stroke-width="1.8" stroke-linecap="round"/>
+                  <!-- Feet -->
+                  <path d="M116 97V104H124V97" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                  <path d="M130 97V104H138V97" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+                  <!-- Vivid Coral Tablet / Browser with </> -->
+                  <rect x="135" y="65" width="28" height="24" rx="4" fill="#FF583D" stroke="#111827" stroke-width="2.2"/>
+                  <path d="M141 77L138 80L141 83" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M145 83L147 77" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M151 77L154 80L151 83" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Sparkle Star -->
+                  <path d="M158 44L160 49L165 50.5L160 52L158 57L156 52L151 50.5L156 49L158 44Z" fill="#111827"/>
+                </svg>
+              </div>
+
+              <div class="path-footer">
+                <span class="path-courses-count">7 Courses</span>
+                <button class="path-arrow-btn" aria-label="Open Future Skills & Web Course">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           5. NOELLE — AI LEARNING COMPANION (Full-Width Signature Product Section)
+           ========================================= -->
+      <section class="noelle-section" id="noelle">
+        
+        <!-- Full-Width Ambient Grid & Atmospheric Light Overlay -->
+        <div class="noelle-ambient-overlay" aria-hidden="true"></div>
+
+        <!-- Concentrated Brand Decorative Accents -->
+        <div class="noelle-sparkle-deco deco-top-left" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z" fill="#C4F934" stroke="#0B251B" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="noelle-sparkle-deco deco-top-right" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z" fill="#EFE8FF" stroke="#0B251B" stroke-width="1.5"/>
+          </svg>
+        </div>
+
+        <div class="container">
+          <div class="noelle-layout-grid">
+            
+            <!-- Left Editorial Column (Headline, Copy, 3 Capabilities, CTA) -->
+            <div class="noelle-editorial-col">
+              
+              <div class="noelle-kicker">
+                <span class="noelle-kicker-pill">
+                  <span class="noelle-kicker-dot"></span>
+                  AI LEARNING COMPANION
+                </span>
+                <span class="noelle-kicker-scribble">thinks with you, never gives spoilers ✦</span>
+              </div>
+
+              <h2 class="noelle-title">
+                Meet <span class="highlight-marker">Noelle</span>, the AI companion behind Theorly.
+              </h2>
+
+              <p class="noelle-lead">
+                Noelle helps students understand difficult concepts, reason through complex code step by step, and build genuine problem-solving independence.
+              </p>
+
+              <!-- 3 Concise Capability Highlights -->
+              <div class="noelle-highlights-list">
+                <div class="noelle-highlight-item">
+                  <span class="highlight-bullet bullet-lime">✦</span>
+                  <div class="highlight-text">
+                    <strong>Socratic guidance, not answers:</strong> Asks thoughtful guiding questions that spark real "aha!" moments without spoiling the process.
+                  </div>
+                </div>
+
+                <div class="noelle-highlight-item">
+                  <span class="highlight-bullet bullet-lavender">✦</span>
+                  <div class="highlight-text">
+                    <strong>Calm, methodical debugging:</strong> Teaches students how to read error logs, isolate logic bugs, and trace state systematically.
+                  </div>
+                </div>
+
+                <div class="noelle-highlight-item">
+                  <span class="highlight-bullet bullet-teal">✦</span>
+                  <div class="highlight-text">
+                    <strong>Adaptive to every student:</strong> Remembers project context and dynamically scales explanation depth to match the learner's pace.
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA & Reassuring Caption -->
+              <div class="noelle-action-row">
+                <a href="#join" class="btn-meet-noelle-main" id="btn-meet-noelle">
+                  <span>Experience Noelle</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <span class="noelle-action-caption">always patient · zero judgment ✦</span>
+              </div>
+
+            </div>
+
+            <!-- Right Visual Stage Column (Large Focal Noelle with Layered Brand Aura) -->
+            <div class="noelle-visual-col">
+              <div class="noelle-focal-stage">
+                
+                <!-- Layered Organic Brand Color Halos & Auras -->
+                <div class="halo-blob halo-lime-aura"></div>
+                <div class="halo-blob halo-lavender-aura"></div>
+                <div class="halo-blob halo-mint-aura"></div>
+
+                <!-- Floating Live Socratic Status Pill -->
+                <div class="noelle-status-pill">
+                  <span class="status-live-dot"></span>
+                  <span>Socratic Mode · Reasoning Active</span>
+                </div>
+
+                <!-- Floating Pedagogical Thought Clue Bubble -->
+                <div class="noelle-floating-thought">
+                  <span class="thought-spark">💡</span>
+                  <span class="thought-txt">"Let's trace loop <code>i</code> on line 8!"</span>
+                </div>
+
+                <!-- Hand-drawn curved arrow & doodle annotation -->
+                <div class="noelle-doodle-pointer" aria-hidden="true">
+                  <svg width="44" height="34" viewBox="0 0 44 34" fill="none" stroke="#0B251B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6C14 18 26 24 38 26M38 26L28 28M38 26L34 16"/>
+                  </svg>
+                  <span class="doodle-caption">guides your thinking</span>
+                </div>
+
+                <!-- Large Focal Charismatic Noelle Vector Character Illustration -->
+                <div class="noelle-character-figure">
+                  <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="noelle-hero-character-svg" aria-label="Noelle AI learning companion">
+                    <!-- Base Multi-Color Organic Aura Ring -->
+                    <circle cx="140" cy="140" r="128" fill="#FFFFFF" stroke="#0B251B" stroke-width="2.5"/>
+                    <circle cx="140" cy="140" r="110" fill="url(#noelle-hero-glow)" opacity="0.9"/>
+                    
+                    <defs>
+                      <linearGradient id="noelle-hero-glow" x1="30" y1="30" x2="250" y2="250" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#EFE8FF"/>
+                        <stop offset="0.45" stop-color="#FFFDF7"/>
+                        <stop offset="0.85" stop-color="#F4EFE0"/>
+                        <stop offset="1" stop-color="#C4F934"/>
+                      </linearGradient>
+                      <linearGradient id="noelle-body-grad-rich" x1="70" y1="70" x2="210" y2="230" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#D7FA5C"/>
+                        <stop offset="0.75" stop-color="#C4F934"/>
+                        <stop offset="1" stop-color="#AEEF1A"/>
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Surrounding Floating Sparkles & Geometrics -->
+                    <path d="M46 62L49 53L52 62L61 65L52 68L49 77L46 68L37 65L46 62Z" fill="#C4F934" stroke="#0B251B" stroke-width="1.8"/>
+                    <path d="M232 54L235 45L238 54L247 57L238 60L235 69L232 60L223 57L232 54Z" fill="#7C3AED" stroke="#0B251B" stroke-width="1.8"/>
+                    <circle cx="240" cy="182" r="5" fill="#C4F934" stroke="#0B251B" stroke-width="1.8"/>
+                    <circle cx="42" cy="172" r="4.5" fill="#F472B6" stroke="#0B251B" stroke-width="1.8"/>
+                    <path d="M228 116L232 112L236 116L232 120Z" fill="#00F0AD"/>
+
+                    <!-- Mascot Head / Body Organic Character Shape -->
+                    <path d="M76 146C70 114 84 76 140 76C196 76 210 114 204 146C198 174 183 202 172 222C159 243 121 243 108 222C96 202 82 174 76 146Z" fill="url(#noelle-body-grad-rich)" stroke="#0B251B" stroke-width="3.4" stroke-linejoin="round"/>
+                    
+                    <!-- Headphones Headband & Cushions -->
+                    <path d="M70 134C70 72 104 46 140 46C176 46 210 72 210 134" stroke="#0B251B" stroke-width="6.5" stroke-linecap="round"/>
+                    <rect x="50" y="118" width="24" height="50" rx="12" fill="#0B251B"/>
+                    <rect x="54" y="122" width="16" height="42" rx="8" fill="#7C3AED"/>
+                    <rect x="206" y="118" width="24" height="50" rx="12" fill="#0B251B"/>
+                    <rect x="210" y="122" width="16" height="42" rx="8" fill="#7C3AED"/>
+                    
+                    <!-- Expressive, Inquisitive Eyes -->
+                    <path d="M104 136C110 145 119 145 125 136" stroke="#0B251B" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M155 136C161 145 170 145 176 136" stroke="#0B251B" stroke-width="4" stroke-linecap="round"/>
+                    
+                    <!-- Friendly Warm Smile -->
+                    <path d="M131 160C137 167 143 167 149 160" stroke="#0B251B" stroke-width="3.2" stroke-linecap="round"/>
+                    
+                    <!-- Rosy Cheeks -->
+                    <ellipse cx="94" cy="148" rx="7.5" ry="4.5" fill="#F472B6" opacity="0.8"/>
+                    <ellipse cx="186" cy="148" rx="7.5" ry="4.5" fill="#F472B6" opacity="0.8"/>
+                    
+                    <!-- Idea Spark Antenna on Top -->
+                    <path d="M140 46V26" stroke="#0B251B" stroke-width="3.8" stroke-linecap="round"/>
+                    <path d="M133 18L140 5L147 18L160 21L147 24L140 37L133 24L120 21L133 18Z" fill="#C4F934" stroke="#0B251B" stroke-width="2.4"/>
+                  </svg>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           6. DESIGNED FOR SCHOOLS (Full-Width Institutional Section)
+           ========================================= -->
+      <section class="schools-section" id="schools">
+        
+        <!-- Full-Width Technical Grid Background -->
+        <div class="schools-grid-overlay" aria-hidden="true"></div>
+
+        <!-- Subtle Restrained Brand Accents & Scribbles -->
+        <div class="schools-deco-spark spark-top-left" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.2 9.8L24 12L14.2 14.2L12 24L9.8 14.2L0 12L9.8 9.8L12 0Z"/>
+          </svg>
+        </div>
+        <div class="schools-deco-spark spark-bottom-right" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.2 9.8L24 12L14.2 14.2L12 24L9.8 14.2L0 12L9.8 9.8L12 0Z"/>
+          </svg>
+        </div>
+
+        <!-- Subtle Top-Right Squiggle Scribble -->
+        <div class="schools-bg-squiggle" aria-hidden="true">
+          <svg width="64" height="32" viewBox="0 0 64 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 22C12 8 20 28 32 14C44 2 52 24 60 10" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Subtle Bottom-Left Orbital Loop Scribble -->
+        <div class="schools-bg-loop" aria-hidden="true">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 38C8 30 10 14 26 12C42 10 46 28 36 38C26 48 18 36 28 26C36 18 42 22 40 30" stroke="#D5E82D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Subtle Floating Crosshairs / Plus Doodles -->
+        <div class="schools-bg-plus plus-1" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1V13M1 7H13" stroke="#FAF7F0" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="schools-bg-plus plus-2" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1V13M1 7H13" stroke="#D5E82D" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="schools-inner-container">
+          <div class="schools-content-grid">
+
+            <!-- Left Column: Content, How it Works & Stats -->
+            <div class="schools-left-content">
+              
+              <!-- Eyebrow with subtle brand dot -->
+              <div class="schools-eyebrow-row">
+                <span class="schools-eyebrow-text">INSTITUTIONS</span>
+                <span class="schools-eyebrow-dot"></span>
+                <span class="schools-eyebrow-sub">K-12 PARTNERSHIP</span>
+                <!-- Subtle tiny starburst -->
+                <svg class="schools-eyebrow-star" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M8 0L9.5 6.5L16 8L9.5 9.5L8 16L6.5 9.5L0 8L6.5 6.5L8 0Z" fill="#D5E82D"/>
+                </svg>
+              </div>
+
+              <!-- Main Title with subtle organic accent -->
+              <h2 class="schools-heading">
+                Designed for Schools
+                <svg class="schools-heading-underline" width="140" height="9" viewBox="0 0 140 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M3 6.5C40 2.5 98 2 137 5.5" stroke="#D5E82D" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.7"/>
+                </svg>
+              </h2>
+
+              <!-- Lead Description -->
+              <p class="schools-lead-text">
+                THEORLY partners with schools to bring Learn by Building into the classroom — alongside traditional academics, not in place of them.
+              </p>
+
+              <!-- CTA Button & Subtle Arrow Annotation -->
+              <div class="schools-cta-holder">
+                <a href="#partner" class="btn-partner-reference" id="btn-partner-schools">
+                  <span>Partner With Us</span>
+                  <span class="btn-partner-arrow-circle">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </span>
+                </a>
+
+                <!-- Subtle Hand-Drawn Arrow Annotation -->
+                <div class="schools-cta-annotation" aria-hidden="true">
+                  <svg class="cta-scribble-arrow" width="34" height="24" viewBox="0 0 34 24" fill="none">
+                    <path d="M30 4C24 16 14 18 6 15M6 15L11 11M6 15L10 20" stroke="#D5E82D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="cta-scribble-label">Zero IT setup required</span>
+                </div>
+              </div>
+
+              <!-- HOW IT WORKS Subsection -->
+              <div class="schools-how-it-works-block">
+                <div class="how-it-works-eyebrow-row">
+                  <span class="how-it-works-eyebrow">HOW IT WORKS</span>
+                  <svg class="how-scribble-spark" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M7 1L8 5.5L12.5 7L8 8.5L7 13L6 8.5L1.5 7L6 5.5L7 1Z" fill="#C4B5FD" opacity="0.6"/>
+                  </svg>
+                </div>
+
+                <!-- 4 Step Tabs -->
+                <div class="how-tabs-nav" role="tablist">
+                  <button class="how-tab-btn active" data-step="register" role="tab" aria-selected="true">Register</button>
+                  <button class="how-tab-btn" data-step="pilot" role="tab" aria-selected="false">Pilot</button>
+                  <button class="how-tab-btn" data-step="rollout" role="tab" aria-selected="false">Rollout</button>
+                  <button class="how-tab-btn" data-step="certify" role="tab" aria-selected="false">Certify</button>
+                </div>
+
+                <!-- Active Step Description -->
+                <div class="how-step-content" id="how-step-content-area">
+                  <h3 class="how-step-title" id="how-step-title">School Registration</h3>
+                  <p class="how-step-desc" id="how-step-desc">
+                    Your school signs up and completes an onboarding call. We assess cohort size, timetable, and the best-fit Mission track.
+                  </p>
+                </div>
+
+                <!-- 3 Spec/Stat Cards -->
+                <div class="how-stats-grid" id="how-stats-grid">
+                  <div class="how-stat-box">
+                    <div class="stat-box-val" id="stat-val-1">3</div>
+                    <div class="stat-box-lbl" id="stat-lbl-1">Mission Tracks</div>
+                  </div>
+                  <div class="how-stat-box">
+                    <div class="stat-box-val" id="stat-val-2">8–12</div>
+                    <div class="stat-box-lbl" id="stat-lbl-2">Grades</div>
+                  </div>
+                  <div class="how-stat-box">
+                    <div class="stat-box-val" id="stat-val-3">Small</div>
+                    <div class="stat-box-lbl" id="stat-lbl-3">Cohort Sizes</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Right Column: Partnership Model Panel -->
+            <div class="schools-right-panel">
+              <div class="schools-partnership-panel">
+                
+                <!-- Subtle Corner Doodle Accent -->
+                <svg class="panel-corner-doodle" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 14V5C3 3.89543 3.89543 3 5 3H14" stroke="#D5E82D" stroke-width="1.8" stroke-linecap="round" opacity="0.4"/>
+                  <circle cx="18" cy="6" r="1.5" fill="#D5E82D" opacity="0.5"/>
+                </svg>
+
+                <!-- Panel Header -->
+                <div class="partnership-panel-header">
+                  <span class="partnership-header-label">PARTNERSHIP MODEL</span>
+                  <div class="now-partnering-badge">
+                    <span class="partnering-dot"></span>
+                    <span>Now Partnering With Schools</span>
+                  </div>
+                </div>
+
+                <!-- 3 Partnership Capabilities -->
+                <div class="partnership-items-list">
+                  
+                  <!-- Item 1: School Integration -->
+                  <div class="partnership-item">
+                    <div class="partnership-icon-box">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9"></path>
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                      </svg>
+                    </div>
+                    <div class="partnership-item-text">
+                      <h4 class="partnership-item-title">School Integration</h4>
+                      <p class="partnership-item-desc">
+                        Programs delivered alongside existing curriculum with minimal disruption.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="partnership-divider"></div>
+
+                  <!-- Item 2: Future Skills Exposure -->
+                  <div class="partnership-item">
+                    <div class="partnership-icon-box">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                    </div>
+                    <div class="partnership-item-text">
+                      <h4 class="partnership-item-title">Future Skills Exposure</h4>
+                      <p class="partnership-item-desc">
+                        Early exposure to AI, cybersecurity, and programming before higher education.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="partnership-divider"></div>
+
+                  <!-- Item 3: Scalable Implementation -->
+                  <div class="partnership-item">
+                    <div class="partnership-icon-box">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                    </div>
+                    <div class="partnership-item-text">
+                      <h4 class="partnership-item-title">Scalable Implementation</h4>
+                      <p class="partnership-item-desc">
+                        Flexible programs for any school size — pilots to institution-wide rollouts.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Right-Side Vertical Page Indicator Dots -->
+            <div class="schools-vertical-dots" aria-hidden="true">
+              <span class="v-dot"></span>
+              <span class="v-dot"></span>
+              <span class="v-dot"></span>
+              <span class="v-dot active"></span>
+              <span class="v-dot"></span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           FREQUENTLY ASKED QUESTIONS (FAQ)
+           ========================================= -->
+      <section class="faq-section" id="faq">
+        <div class="container">
+          <div class="faq-header">
+            <div>
+              <span class="hand-annotation purple" style="position: relative; margin-bottom: 4px; transform: rotate(-2deg);">
+                <span>💡 got doubts? no silly questions!</span>
+              </span>
+              <h2 class="faq-title">Frequently asked questions</h2>
+            </div>
+          </div>
+
+          <!-- 2-Column FAQ Accordion Grid -->
+          <div class="faq-grid" id="faq-grid">
+            <!-- Left Column -->
+            <div class="faq-col">
+              <!-- Item 1: Is Theorly free to use? -->
+              <div class="faq-card" id="faq-card-1">
+                <button class="faq-question-btn" id="faq-btn-1" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+                  <span class="faq-question-text">Is Theorly free to use?</span>
+                  <span class="faq-icon-chevron" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-answer-1" role="region" aria-labelledby="faq-btn-1">
+                  <div class="faq-answer-content">
+                    <p>Yes! Theorly provides free access to foundational courses, beginner projects, and learning resources to help every student start their journey in technology and future skills without any barriers.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: Who is Theorly for? -->
+              <div class="faq-card" id="faq-card-2">
+                <button class="faq-question-btn" id="faq-btn-2" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+                  <span class="faq-question-text">Who is Theorly for?</span>
+                  <span class="faq-icon-chevron" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-answer-2" role="region" aria-labelledby="faq-btn-2">
+                  <div class="faq-answer-content">
+                    <p>Theorly is tailored for middle school, high school, and early college students who want to develop practical, hands-on skills in artificial intelligence, programming, cybersecurity, and web development through guided real-world projects.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3: Do I get a certificate? -->
+              <div class="faq-card" id="faq-card-3">
+                <button class="faq-question-btn" id="faq-btn-3" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+                  <span class="faq-question-text">Do I get a certificate?</span>
+                  <span class="faq-icon-chevron" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-answer-3" role="region" aria-labelledby="faq-btn-3">
+                  <div class="faq-answer-content">
+                    <p>Yes! Upon completing any course pathway and successfully building its capstone project, you earn a verified digital certificate that you can share on your portfolio, resume, and college applications.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hidden FAQ 7 (revealed on View All) -->
+              <div class="faq-card faq-extra-item" id="faq-card-7">
+                <button class="faq-question-btn" id="faq-btn-7" type="button" aria-expanded="false" aria-controls="faq-answer-7">
+                  <span class="faq-question-text">What hardware or software do I need?</span>
+                  <span class="faq-icon-chevron" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-answer-7" role="region" aria-labelledby="faq-btn-7">
+                  <div class="faq-answer-content">
+                    <p>All you need is a modern web browser on a laptop, desktop, Chromebook, or tablet. Everything runs directly in the cloud with no complicated local installations required.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="faq-col">
+              <!-- Item 4: How do challenges work? -->
+              <div class="faq-card" id="faq-card-4">
+                <button class="faq-question-btn" id="faq-btn-4" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+                  <span class="faq-question-text">How do challenges work?</span>
+                  <span class="faq-icon-chevron" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-answer-4" role="region" aria-labelledby="faq-btn-4">
+                  <div class="faq-answer-content">
+                    <p>Challenges are real-world interactive problem-solving quests. You write code or solve scenarios directly in your browser, test your solution against automated test cases, and earn XP, ranks, and collectible badges.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5: Can I learn at my own pace? -->
+              <div class="faq-card" id="faq-card-5">
+                <button class="faq-question-btn" id="faq-btn-5" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+                  <span class="faq-question-text">Can I learn at my own pace?</span>
+                  <span class="faq-icon-chevron" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-answer-5" role="region" aria-labelledby="faq-btn-5">
+                  <div class="faq-answer-content">
+                    <p>Absolutely. All Theorly learning modules are 100% self-paced with 24/7 assistance from Noelle, your AI learning companion. Learn whenever fits your schedule best without any pressure.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 6: How can schools partner with Theorly? -->
+              <div class="faq-card" id="faq-card-6">
+                <button class="faq-question-btn" id="faq-btn-6" type="button" aria-expanded="false" aria-controls="faq-answer-6">
+                  <span class="faq-question-text">How can schools partner with Theorly?</span>
+                  <span class="faq-icon-chevron" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-answer-6" role="region" aria-labelledby="faq-btn-6">
+                  <div class="faq-answer-content">
+                    <p>Schools can easily integrate Theorly into their STEM, coding, and computer science curricula with custom teacher dashboards, student progress tracking, institutional licensing, and structured hands-on projects.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hidden FAQ 8 (revealed on View All) -->
+              <div class="faq-card faq-extra-item" id="faq-card-8">
+                <button class="faq-question-btn" id="faq-btn-8" type="button" aria-expanded="false" aria-controls="faq-answer-8">
+                  <span class="faq-question-text">How does Noelle help students?</span>
+                  <span class="faq-icon-chevron" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-wrapper" id="faq-answer-8" role="region" aria-labelledby="faq-btn-8">
+                  <div class="faq-answer-content">
+                    <p>Noelle acts as a 24/7 personal tutor. When you get stuck on a coding concept or bug, Noelle guides you step-by-step with hints rather than just giving away the answers.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+           READY TO BUILD YOUR FUTURE? / CTA BANNER
+           ========================================= -->
+      <section class="cta-banner-section" id="join">
+        <div class="container">
+          <div class="cta-banner-card">
+            <!-- Left Info -->
+            <div class="cta-banner-left" style="position: relative;">
+              <span class="hand-annotation teal" style="position: relative; margin-bottom: 6px; transform: rotate(-2deg);">
+                <span>✨ join the next generation of builders</span>
+              </span>
+              <h2 class="cta-banner-title">Ready to build your future?</h2>
+              <p class="cta-banner-subtitle">Join Theorly and start learning today.</p>
+              <button class="btn-cta-banner" id="btn-banner-start">
+                Start learning free
+                <svg class="star-icon" viewBox="0 0 24 24">
+                  <path d="M12 0L14.4 7.6L22 4.4L16.4 12L24 14.4L16.4 16.8L22 24.4L14.4 21.2L12 28.8L9.6 21.2L2 24.4L7.6 16.8L0 14.4L7.6 12L2 4.4L9.6 7.6L12 0Z"/>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Right Running / Leaping Mascot Illustration -->
+            <div class="cta-banner-right">
+              <svg viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg" class="cta-mascot-svg">
+                <!-- Motion Action Lines behind -->
+                <path d="M185 140C188 145 190 152 195 155" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M192 135C198 140 202 145 208 148" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M178 145C182 152 185 158 190 162" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- Sparkles -->
+                <path d="M78 28L80 34L86 35.5L80 37L78 43L76 37L70 35.5L76 34L78 28Z" fill="#111827"/>
+                <path d="M68 62L69.5 66L74 67.5L69.5 69L68 73L66.5 69L62 67.5L66.5 66L68 62Z" fill="#111827"/>
+                <circle cx="198" cy="62" r="10" fill="#7C3AED" opacity="0.4"/>
+                <path d="M198 52L200 58L206 59.5L200 61L198 67L196 61L190 59.5L196 58L198 52Z" fill="#7C3AED"/>
+
+                <!-- Dark Backpack on Back -->
+                <path d="M165 72C175 75 180 85 178 100C176 112 168 118 158 115L150 95L165 72Z" fill="#111827" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                <!-- Backpack Strap -->
+                <path d="M148 76C152 88 150 102 145 110" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+
+                <!-- Mascot Happy Yellow Body Running -->
+                <path d="M102 65C92 45 106 25 125 22C145 20 156 35 158 55C160 75 152 95 142 108C132 120 115 122 100 110C88 98 84 80 102 65Z" fill="#C4F934" stroke="#111827" stroke-width="3" stroke-linejoin="round"/>
+                
+                <!-- Happy Face -->
+                <circle cx="128" cy="45" r="2.5" fill="#111827"/>
+                <circle cx="140" cy="45" r="2.5" fill="#111827"/>
+                <path d="M130 54C134 58 138 58 142 54" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- Front Running Arm -->
+                <path d="M115 65C102 60 92 68 85 75" stroke="#C4F934" stroke-width="9" stroke-linecap="round"/>
+                <path d="M115 65C102 60 92 68 85 75" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="85" cy="75" r="5" fill="#C4F934" stroke="#111827" stroke-width="2"/>
+
+                <!-- Back Running Arm -->
+                <path d="M142 65C152 68 160 76 168 82" stroke="#C4F934" stroke-width="8" stroke-linecap="round"/>
+                <path d="M142 65C152 68 160 76 168 82" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- Front Leg Kicking Forward -->
+                <path d="M108 115C95 125 82 142 80 155H92" fill="#C4F934" stroke="#111827" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M80 155C75 155 72 158 78 162C84 165 92 162 92 155" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+
+                <!-- Back Leg Kicking Backwards -->
+                <path d="M138 112C150 120 162 128 172 135L165 142" fill="#C4F934" stroke="#111827" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M172 135C178 138 180 144 175 148C170 150 165 146 165 142" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================
+         SITE FOOTER
+         ========================================= -->
+    <footer class="site-footer" id="footer">
+      <div class="container">
+        <!-- Top Footer Grid -->
+        <div class="footer-top-grid">
+          <!-- Col 1: Brand Info -->
+          <div class="footer-col-brand">
+            <a href="#" class="brand-logo footer-logo">
+              <span class="brand-text">Theorly</span>
+              <svg class="brand-mascot" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M38 18L44 19L41 28L35 27L38 18Z" fill="#7C3AED" stroke="#111827" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M40 12L42 18" stroke="#00F0AD" stroke-width="2" stroke-linecap="round"/>
+                <path d="M43 11L44.5 13.5L47 13L45.5 15.5L47 18L44.5 17.5L43 20L41.5 17.5L39 18L40.5 15.5L39 13L41.5 13.5L43 11Z" fill="#C4F934" stroke="#111827" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M12 36C8 34 8 28 11 22C14 16 20 12 28 12C36 12 40 16 40 22C40 26 38 32 37 36C36 40 33 44 26 44C18 44 14 41 12 36Z" fill="#C4F934" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M10 32C6 34 4 39 8 42C11 44 14 42 14 39" fill="#C4F934" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="27" cy="20" r="2.2" fill="#111827"/>
+                <circle cx="34" cy="21" r="2.2" fill="#111827"/>
+                <path d="M29 25C31 27 33 27 34 25" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+                <path d="M33 29C36 30 38 32 37 35" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M22 43V47C22 48.5 24 49 26 49C28 49 29 48 29 46V43" fill="#C4F934" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+                <path d="M32 42V46C32 47.5 34 48 36 48C38 48 39 47 39 45V41" fill="#C4F934" stroke="#111827" stroke-width="2.2" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <p class="footer-brand-desc">
+              Theorly is an all-in-one learning platform for school students to learn, practice, build and grow future-ready skills.
+            </p>
+            <!-- Social Icons -->
+            <div class="footer-social-links">
+              <!-- Instagram -->
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <!-- YouTube -->
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+                </svg>
+              </a>
+              <!-- Discord -->
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Discord">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 6h0a14.5 14.5 0 0 0-4-1.2 12 12 0 0 0-.5 1.2 13.5 13.5 0 0 0-3 0 12 12 0 0 0-.5-1.2A14.5 14.5 0 0 0 6 6a17.5 17.5 0 0 0-2 11 14.8 14.8 0 0 0 4.5 2.3 11 11 0 0 0 1-1.6 9.6 9.6 0 0 1-1.6-.8l.4-.3a11.2 11.2 0 0 0 7.4 0l.4.3a9.6 9.6 0 0 1-1.6.8 11 11 0 0 0 1 1.6 14.8 14.8 0 0 0 4.5-2.3A17.5 17.5 0 0 0 18 6z"></path>
+                  <circle cx="9.5" cy="11.5" r="1.5" fill="currentColor"></circle>
+                  <circle cx="14.5" cy="11.5" r="1.5" fill="currentColor"></circle>
+                </svg>
+              </a>
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2: Explore -->
+          <div class="footer-col-nav">
+            <h4 class="footer-heading">Explore</h4>
+            <ul class="footer-links">
+              <li><a href="#learning-paths">Courses</a></li>
+              <li><a href="#learning-by-building">How It Works</a></li>
+              <li><a href="#noelle">Noelle AI</a></li>
+              <li><a href="#schools">For Schools</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Company -->
+          <div class="footer-col-nav">
+            <h4 class="footer-heading">Company</h4>
+            <ul class="footer-links">
+              <li><a href="#about">About us</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#careers">Careers</a></li>
+              <li><a href="#contact">Contact us</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Support -->
+          <div class="footer-col-nav">
+            <h4 class="footer-heading">Support</h4>
+            <ul class="footer-links">
+              <li><a href="#help">Help Center</a></li>
+              <li><a href="#terms">Terms of Use</a></li>
+              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="#refund">Refund Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5: Stay in the loop -->
+          <div class="footer-col-newsletter">
+            <h4 class="footer-heading">Stay in the loop</h4>
+            <p class="footer-newsletter-desc">
+              Get the latest updates and new courses straight to your inbox.
+            </p>
+            <form class="newsletter-form" id="newsletter-form">
+              <input 
+                type="email" 
+                class="newsletter-input" 
+                placeholder="Enter your email" 
+                required 
+                aria-label="Email address"
+                id="newsletter-email"
+              />
+              <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </form>
+            <div class="newsletter-feedback" id="newsletter-feedback"></div>
+          </div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="footer-bottom-row">
+          <p class="copyright-text">© 2026 Theorly. All rights reserved.</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<!-- ═══ FOOTER ═══ -->
-<footer class="site-footer" id="contact">
-  <div class="container">
-    <div class="footer-brand-row">
-      <div class="footer-brand">
-        <a href="index.html" class="logo" style="margin-bottom:14px"><div class="logo-mark">T</div>THEORLY</a>
-        <p class="footer-brand-desc">An AI-powered learning ecosystem for students in Grades 8–12. Learning by building real things, guided by Noelle.</p>
-        <div class="fc-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:hello@theorly.in">hello@theorly.in</a></div>
-        <div class="fc-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Kerala, INDIA &amp; Online</div>
+    <!-- =========================================
+         INTERACTIVE MODALS
+         ========================================= -->
+    <!-- 1. Chat with Noelle Modal -->
+    <div class="modal-backdrop" id="noelle-modal" aria-hidden="true">
+      <div class="modal-container noelle-chat-modal">
+        <div class="modal-header">
+          <div class="modal-title-with-avatar">
+            <div class="noelle-avatar-small">
+              <svg viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="20" fill="#D5E82D"/>
+                <path d="M12 28C14 22 18 20 20 20C22 20 26 22 28 28" fill="#111827"/>
+                <circle cx="16" cy="16" r="2" fill="#111827"/>
+                <circle cx="24" cy="16" r="2" fill="#111827"/>
+                <path d="M18 20C19 22 21 22 22 20" stroke="#111827" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="modal-title">Noelle</h3>
+              <span class="modal-subtitle"><span class="online-dot"></span> AI Learning Companion • Ready to help</span>
+            </div>
+          </div>
+          <button class="modal-close-btn" id="close-noelle-modal" aria-label="Close Chat">&times;</button>
+        </div>
+
+        <div class="chat-messages-body" id="chat-messages">
+          <div class="chat-msg ai-msg">
+            <div class="chat-bubble">
+              Hi there! 👋 I'm <strong>Noelle</strong>, your AI learning buddy. What would you like to explore today?
+            </div>
+          </div>
+          <div class="chat-suggestions">
+            <button class="chat-suggestion-chip">Explain neural networks simply</button>
+            <button class="chat-suggestion-chip">How do I start Python?</button>
+            <button class="chat-suggestion-chip">Give me a quick coding challenge</button>
+          </div>
+        </div>
+
+        <form class="chat-input-form" id="chat-form">
+          <input type="text" class="chat-input" id="chat-input-text" placeholder="Ask Noelle anything..." required />
+          <button type="submit" class="chat-send-btn" aria-label="Send message">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
-    <div class="footer-grid">
-      <div class="footer-col"><h3>Company</h3><ul><li><a href="about.html">About THEORLY</a></li><li><a href="about.html#philosophy">Our Philosophy</a></li><li><a href="index.html#who-dark">Meet Noelle</a></li><li><a href="#">Careers</a></li><li><a href="#">Blog</a></li></ul></div>
-      <div class="footer-col"><h3>Missions</h3><ul><li><a href="#missions">Build Your First AI</a></li><li><a href="#missions">Create a Secure Website</a></li><li><a href="#missions">Design Your Own App</a></li><li><a href="course.html">All Programs</a></li></ul></div>
-      <div class="footer-col"><h3>Resources</h3><ul><li><a href="#">Parent Guide</a></li><li><a href="partnership.html">School Partnership</a></li><li><a href="#faq">FAQs</a></li><li><a href="#">Learning Blog</a></li></ul></div>
-      <div class="footer-col"><h3>Legal</h3><ul><li><a href="Terms.html">Terms &amp; Conditions</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="#">Cookie Policy</a></li><li><a href="#">Refund Policy</a></li><li><a href="#">Accessibility</a></li></ul></div>
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 THEORLY Education. All rights reserved.</div>
-      <div class="footer-legal"><a href="Terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="#">Cookies</a></div>
-      <div class="social-links">
-        <a href="#" class="btn-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-        <a href="#" class="btn-icon" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
-        <a href="#" class="btn-icon" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
-        <a href="#" class="btn-icon" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" stroke="currentColor" stroke-width="2"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+
+    <!-- 2. School Partnership Modal -->
+    <div class="modal-backdrop" id="partner-modal" aria-hidden="true">
+      <div class="modal-container form-modal">
+        <div class="modal-header">
+          <div>
+            <h3 class="modal-title">Partner with Theorly</h3>
+            <p class="modal-subtitle">Bring future skills & AI curriculum directly to your students.</p>
+          </div>
+          <button class="modal-close-btn" id="close-partner-modal" aria-label="Close modal">&times;</button>
+        </div>
+        <form class="modal-form" id="partnership-form">
+          <div class="form-group">
+            <label for="school-name">School / Institution Name</label>
+            <input type="text" id="school-name" required placeholder="e.g. Cambridge High School" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" required placeholder="e.g. Dr. Sarah Jenkins" />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Work Email</label>
+              <input type="email" id="contact-email" required placeholder="name@school.edu" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="student-count">Estimated Students</label>
+            <select id="student-count" required>
+              <option value="">Select student count</option>
+              <option value="50-200">50 - 200 students</option>
+              <option value="200-500">200 - 500 students</option>
+              <option value="500-1000">500 - 1,000 students</option>
+              <option value="1000+">1,000+ students (District/Group)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="partner-notes">Goals / Comments (Optional)</label>
+            <textarea id="partner-notes" rows="3" placeholder="Tell us about your computer science or STEM goals..."></textarea>
+          </div>
+          <button type="submit" class="btn-cta-primary w-full">Submit Partnership Request</button>
+          <div class="form-feedback" id="partner-feedback"></div>
+        </form>
       </div>
     </div>
-  </div>
-</footer>
 
-<!-- ─── TOAST ─── -->
-<div id="toast"><span class="toast-ico">🎉</span><span id="toast-msg">You're on the waitlist — we'll be in touch!</span></div>
+    <!-- 3. Student Enrollment / Join Modal -->
+    <div class="modal-backdrop" id="signup-modal" aria-hidden="true">
+      <div class="modal-container form-modal">
+        <div class="modal-header">
+          <div>
+            <h3 class="modal-title">Join Theorly</h3>
+            <p class="modal-subtitle">Start building projects and mastering tomorrow's skills today.</p>
+          </div>
+          <button class="modal-close-btn" id="close-signup-modal" aria-label="Close modal">&times;</button>
+        </div>
+        <form class="modal-form" id="student-signup-form">
+          <div class="form-group">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" required placeholder="Alex Rivera" />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email Address</label>
+            <input type="email" id="signup-email" required placeholder="alex@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="signup-track">Preferred First Track</label>
+            <select id="signup-track" required>
+              <option value="ai">AI for Everyone</option>
+              <option value="python">Python Programming</option>
+              <option value="cyber">Cybersecurity Essentials</option>
+              <option value="web">Web Development</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-cta-primary w-full">Start Learning Free</button>
+          <div class="form-feedback" id="signup-feedback"></div>
+        </form>
+      </div>
+    </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
 
-  /* scroll progress + nav scrolled */
-  const spBar = document.getElementById('scroll-progress');
-  const mainNav = document.getElementById('mainNav');
-  const hbg = document.getElementById('hamburgerBtn');
-  const mobn = document.getElementById('mobileNav');
-  window.addEventListener('scroll', () => {
-    spBar.style.width = Math.min(window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100, 100) + '%';
-    mainNav.classList.toggle('scrolled', window.scrollY > 20);
-    updateDotNav();
-  }, { passive: true });
-  hbg.addEventListener('click', e => { e.stopPropagation(); mobn.classList.toggle('open'); hbg.setAttribute('aria-expanded', mobn.classList.contains('open')); });
-  mobn.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { mobn.classList.remove('open'); hbg.setAttribute('aria-expanded', 'false'); }));
-  document.addEventListener('click', e => { if (!mobn.contains(e.target) && !hbg.contains(e.target)) { mobn.classList.remove('open'); hbg.setAttribute('aria-expanded', 'false'); } });
 
-  /* 1. reveal */
-  const revObs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: .15 });
-  document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
-
-  /* 2. separators */
-  const sepObs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('run'); });
-  }, { threshold: .5 });
-  document.querySelectorAll('.section-sep').forEach(el => sepObs.observe(el));
-
-  /* 3. hero progress fills */
-  document.querySelectorAll('.hv-fill').forEach(el => {
-    const w = el.getAttribute('data-w');
-    if (w) setTimeout(() => { el.style.width = w + '%'; }, 350);
-  });
-
-  /* 4. dot nav */
-  const dotItems = document.querySelectorAll('.dn-item');
-  const sections = ['hero', 'why', 'who-dark', 'missions', 'schools', 'faq', 'cta'];
-  function updateDotNav() {
-    const scrollPos = window.scrollY + 160;
-    let activeIndex = sections.length - 1;
-    for (let i = 0; i < sections.length; i++) {
-      const sec = document.getElementById(sections[i]);
-      if (sec && sec.offsetTop > scrollPos) { activeIndex = i - 1; break; }
-    }
-    if (activeIndex < 0) activeIndex = 0;
-    dotItems.forEach((d, idx) => d.classList.toggle('active', idx === activeIndex));
-  }
-  dotItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const t = document.getElementById(item.getAttribute('data-sec'));
-      if (t) t.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-  updateDotNav();
-
-  /* 5. ripple */
-  document.querySelectorAll('.ripple-tgt').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      const rect = this.getBoundingClientRect();
-      const rpl = document.createElement('span');
-      rpl.className = 'ripple-wave';
-      rpl.style.left = (e.clientX - rect.left) + 'px';
-      rpl.style.top = (e.clientY - rect.top) + 'px';
-      this.appendChild(rpl);
-      setTimeout(() => rpl.remove(), 600);
-    });
-  });
-
-  /* 6. magnetic */
-  document.querySelectorAll('.magnetic').forEach(el => {
-    el.addEventListener('mousemove', function (e) {
-      const r = this.getBoundingClientRect();
-      const x = (e.clientX - r.left - r.width / 2) * .18;
-      const y = (e.clientY - r.top - r.height / 2) * .18;
-      this.style.transform = 'translate(' + x + 'px,' + y + 'px)';
-    });
-    el.addEventListener('mouseleave', function () { this.style.transform = ''; });
-  });
-
-  /* 7. mission tabs */
-  const ptabBtns = document.querySelectorAll('.ptab');
-  const progPanels = document.querySelectorAll('.prog-panel');
-  ptabBtns.forEach(btn => {
-    btn.addEventListener('click', function () {
-      ptabBtns.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      const tab = this.getAttribute('data-tab');
-      progPanels.forEach(p => {
-        if (p.getAttribute('data-panel') === tab) {
-          p.classList.add('active', 'fade-in');
-          setTimeout(() => p.classList.remove('fade-in'), 400);
-        } else p.classList.remove('active');
-      });
-    });
-  });
-
-  /* 8. school stepper */
-  const stepTabs = document.querySelectorAll('.step-tab');
-  const stepPanels = document.querySelectorAll('.step-panel');
-  stepTabs.forEach(tab => {
-    tab.addEventListener('click', function () {
-      stepTabs.forEach(t => t.classList.remove('active'));
-      this.classList.add('active');
-      const idx = this.getAttribute('data-s');
-      stepPanels.forEach(p => p.classList.toggle('active', p.getAttribute('data-s') === idx));
-    });
-  });
-
-  /* 9. FAQ accordion */
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', function () {
-      this.closest('.faq-item').classList.toggle('open');
-    });
-    q.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); q.click(); }
-    });
-  });
-
-  /* 10. spotlight (dark sections) */
-  document.querySelectorAll('.dark-section').forEach(sec => {
-    const sp = sec.querySelector('.spotlight');
-    if (!sp) return;
-    sec.addEventListener('mousemove', e => {
-      const r = sec.getBoundingClientRect();
-      sp.style.left = (e.clientX - r.left) + 'px';
-      sp.style.top = (e.clientY - r.top) + 'px';
-      sp.style.opacity = '1';
-    });
-    sec.addEventListener('mouseleave', () => { sp.style.opacity = '0'; });
-  });
-
-  /* 11. number counters */
-  const counterObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const numEl = entry.target;
-        const target = parseInt(numEl.getAttribute('data-target'), 10);
-        const suffix = numEl.getAttribute('data-suffix') || '';
-        if (!target) return;
-        let current = 0;
-        const inc = Math.ceil(target / 40);
-        const timer = setInterval(() => {
-          current += inc;
-          if (current >= target) { numEl.innerText = target + suffix; clearInterval(timer); }
-          else numEl.innerText = current + suffix;
-        }, 25);
-        counterObs.unobserve(numEl);
-      }
-    });
-  }, { threshold: .5 });
-  document.querySelectorAll('.stat-number[data-target]').forEach(el => counterObs.observe(el));
-
-  /* 12. nav spy */
-  const navLinks = document.querySelectorAll('.nav-center a');
-  navLinks.forEach(link => {
-    const hash = link.getAttribute('href');
-    if (hash && hash.startsWith('#')) {
-      const target = document.querySelector(hash);
-      if (target) {
-        new IntersectionObserver(entries => {
-          entries.forEach(e => {
-            if (e.isIntersecting) {
-              navLinks.forEach(l => l.classList.remove('spy-active'));
-              link.classList.add('spy-active');
-            }
-          });
-        }, { rootMargin: '-45% 0px -50% 0px' }).observe(target);
-      }
-    }
-  });
-
-  /* 13. waitlist form + toast */
-  const wlEmail = document.getElementById('wl-email');
-  const wlInd = document.getElementById('wl-ind');
-  const wlBtn = document.getElementById('wl-btn');
-  const toast = document.getElementById('toast');
-  const toastMsg = document.getElementById('toast-msg');
-  function showToast(msg, icon) {
-    toastMsg.innerText = msg;
-    document.querySelector('.toast-ico').innerText = icon || '🎉';
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 4000);
-  }
-  if (wlEmail) {
-    wlEmail.addEventListener('input', function () {
-      const val = this.value.trim();
-      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
-      if (!val) { wlInd.className = 'wl-ind'; this.classList.remove('ok', 'bad'); return; }
-      if (valid) { this.classList.add('ok'); this.classList.remove('bad'); wlInd.textContent = '✓'; wlInd.classList.add('show'); }
-      else { this.classList.add('bad'); this.classList.remove('ok'); wlInd.textContent = '✗'; wlInd.classList.add('show'); }
-    });
-    wlBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(wlEmail.value.trim())) {
-        showToast("You're on the waitlist — we'll be in touch!");
-        wlEmail.value = ''; wlInd.classList.remove('show'); wlEmail.classList.remove('ok', 'bad');
-      } else {
-        showToast('Please enter a valid email', '⚠️');
-      }
-    });
-  }
-
-});
-</script>
-</body>
+    <script src="/script.js"></script>
+  </body>
 </html>
