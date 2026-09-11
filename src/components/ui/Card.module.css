@@ -1,0 +1,76 @@
+.card {
+  position: relative;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md); /* 10px default */
+  box-sizing: border-box;
+  transition: transform var(--dur-std) var(--ease-out),
+              box-shadow var(--dur-std) var(--ease-out),
+              border-color var(--dur-std) var(--ease-out);
+  /* Rule: "none (flat) — shadow appears on hover only" */
+  box-shadow: none;
+}
+
+/* Padding variants: 24px (standard) · 20px (compact) · 32px (feature) */
+.standard {
+  padding: var(--sp-6); /* 24px */
+}
+
+.compact {
+  padding: var(--sp-5, 20px); /* 20px */
+}
+
+.feature {
+  padding: var(--sp-8); /* 32px */
+}
+
+/* Radius variants: 10px default, 16px for product previews */
+.radiusMd {
+  border-radius: var(--radius-md);
+}
+
+.radiusLg {
+  border-radius: var(--radius-lg); /* 16px */
+}
+
+/* Hover lift: translateY(-2px) · shadow-lift · 220ms ease-out */
+.interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+/* Dark variant (for dark sections and product UI) */
+.dark {
+  background-color: var(--dark-surface);
+  border-color: var(--dark-border);
+  color: #FFFFFF;
+}
+
+.dark.interactive:hover {
+  transform: translateY(-2px);
+  border-color: var(--text-tertiary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Alt variant */
+.alt {
+  background-color: var(--surface-alt);
+  border-color: var(--border);
+}
+
+@media (max-width: 900px) {
+  .standard {
+    padding: var(--sp-5, 20px);
+  }
+  .feature {
+    padding: var(--sp-6);
+  }
+}
+
+@media (max-width: 599px) {
+  .standard,
+  .compact,
+  .feature {
+    padding: var(--sp-4);
+  }
+}

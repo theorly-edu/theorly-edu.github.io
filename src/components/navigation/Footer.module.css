@@ -1,0 +1,137 @@
+.footer {
+  background-color: var(--dark-bg);
+  color: #FFFFFF;
+  border-top: 1px solid var(--dark-border);
+  padding-top: var(--sp-16);
+  padding-bottom: var(--sp-12);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--sp-8);
+  margin-bottom: var(--sp-12);
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  max-width: 320px;
+}
+
+.logo {
+  font-family: var(--font-family-primary);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logoDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border: 1.5px solid #000;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #9DA395;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.colTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--sp-2);
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #B5B9AF;
+  text-decoration: none;
+  transition: color var(--dur-micro) var(--ease-out);
+}
+
+.link:hover {
+  color: #FFFFFF;
+}
+
+.bottomBar {
+  padding-top: var(--sp-8);
+  border-top: 1px solid var(--dark-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #7A7D74;
+}
+
+.systemStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--success);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-6);
+  }
+}
+
+@media (max-width: 599px) {
+  .footer {
+    padding-top: var(--sp-10);
+    padding-bottom: var(--sp-8);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .link {
+    display: inline-block;
+    padding: 6px 0;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-4);
+  }
+}

@@ -1,0 +1,339 @@
+.heroWrapper {
+  position: relative;
+  padding-top: clamp(68px, 8.5vw, 104px);
+  padding-bottom: clamp(56px, 7.5vw, 92px);
+  background-color: var(--bg);
+  background-image: 
+    linear-gradient(rgba(17, 18, 13, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 18, 13, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+@keyframes heroFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   1. Eyebrow: FOR SCHOOL STUDENTS · GRADES 8–12
+   ========================================================================== */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: var(--sp-4);
+  animation: heroFadeSlide 450ms var(--ease-entrance) 0ms backwards;
+}
+
+.eyebrowDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  border: 1px solid var(--border-strong);
+}
+
+/* ==========================================================================
+   2. Large Centered Headline (Dominant Visual Element)
+   ========================================================================== */
+.headline {
+  font-family: var(--font-family-primary);
+  font-size: clamp(44px, 6.5vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+  margin: 0;
+  color: var(--text-primary);
+  margin-bottom: var(--sp-6);
+  animation: heroFadeSlide 480ms var(--ease-entrance) 100ms backwards;
+}
+
+/* ==========================================================================
+   Hero Sparkle Animation (.sparkleWrapper, .sparkle, .sparkleSvg, @keyframes spkTwinkle)
+   ========================================================================== */
+.sparkleWrapper {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  transform: translate(var(--pointer-x, 0px), var(--pointer-y, 0px));
+  transition: transform 160ms var(--ease-out);
+}
+
+.sparkle,
+.sparkleSvg {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, opacity, filter;
+  z-index: 1;
+  animation-name: spkTwinkle !important;
+  animation-duration: 2.6s !important;
+  animation-timing-function: ease-in-out !important;
+  animation-iteration-count: infinite !important;
+}
+
+/* 1. Hero star: Top-right, largest and most radiant with periodic crest gleam */
+.sparkle1 {
+  top: -22px;
+  right: -24px;
+  width: 26px;
+  height: 26px;
+  color: var(--accent);
+  --glow-color: rgba(198, 255, 40, 0.95);
+  animation-delay: 0s !important;
+  animation: spkTwinkle 2.6s ease-in-out infinite, spkGleam 5.2s ease-in-out infinite !important;
+}
+
+/* 2. Top-left accent star */
+.sparkle2 {
+  top: -12px;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+  --glow-color: rgba(198, 255, 40, 0.9);
+  animation-delay: 0.65s !important;
+}
+
+/* 3. Bottom-right anchor star */
+.sparkle3 {
+  bottom: -12px;
+  right: -16px;
+  width: 18px;
+  height: 18px;
+  color: var(--text-primary);
+  --glow-color: rgba(198, 255, 40, 0.8);
+  animation-delay: 1.3s !important;
+}
+
+/* 4. Top-right floating crest star */
+.sparkle4 {
+  top: -12px;
+  right: 28px;
+  width: 18px;
+  height: 18px;
+  color: #CDF83B;
+  --glow-color: rgba(205, 248, 59, 0.9);
+  animation-delay: 1.95s !important;
+}
+
+@keyframes spkTwinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.72) rotate(0deg);
+    filter: drop-shadow(0 0 3px var(--glow-color, rgba(198, 255, 40, 0.5)));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15) rotate(45deg);
+    filter: 
+      drop-shadow(0 0 8px var(--glow-color, rgba(198, 255, 40, 0.95)))
+      drop-shadow(0 0 16px var(--glow-color, rgba(198, 255, 40, 0.55)));
+  }
+}
+
+@keyframes spkGleam {
+  0%, 75%, 100% {
+    filter: drop-shadow(0 0 3px var(--glow-color, rgba(198, 255, 40, 0.5)));
+  }
+  85% {
+    filter: 
+      drop-shadow(0 0 10px var(--glow-color, rgba(198, 255, 40, 0.95)))
+      drop-shadow(0 0 20px rgba(198, 255, 40, 0.65));
+    transform: scale(1.22) rotate(60deg);
+  }
+}
+
+/* ==========================================================================
+   3. Description with Typewriter Keyword (.tw-wrap, .tw-txt, .tw-cur)
+   ========================================================================== */
+.subtext {
+  font-family: var(--font-family-primary);
+  font-size: clamp(16px, 1.8vw, 18px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 0 var(--sp-8) 0;
+  animation: heroFadeSlide 460ms var(--ease-entrance) 240ms backwards;
+  min-height: 89px;
+}
+
+.twWrap {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  vertical-align: baseline;
+  text-align: left;
+  position: relative;
+}
+
+.twSizer {
+  grid-area: 1 / 1;
+  visibility: hidden;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.twActive {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.twTxt {
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent);
+  white-space: nowrap;
+}
+
+.twCur {
+  display: inline-block;
+  width: 2px;
+  height: 1.15em;
+  background-color: var(--border-strong);
+  margin-left: 2px;
+  vertical-align: -2px;
+  animation-name: twBlink !important;
+  animation-duration: 0.9s !important;
+  animation-timing-function: steps(2, start) !important;
+  animation-iteration-count: infinite !important;
+}
+
+@keyframes twBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.twPeriod {
+  font-weight: 400;
+  color: var(--text-secondary);
+  font-family: var(--font-family-primary);
+  transition: opacity 120ms ease;
+}
+
+/* ==========================================================================
+   4 & 5. Primary and Secondary CTAs
+   ========================================================================== */
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  animation: heroFadeSlide 420ms var(--ease-entrance) 360ms backwards;
+}
+
+@media (hover: hover) {
+  .headline:hover .sparkle1 {
+    transform: scale(1.28) rotate(75deg);
+    filter: drop-shadow(0 0 14px var(--glow-color, rgba(198, 255, 40, 0.95)));
+  }
+
+  .secondaryCta:hover {
+    color: #11120D;
+    transform: translateY(-1.5px);
+  }
+
+  .secondaryCta:hover .downArrow {
+    transform: translateY(4px);
+  }
+}
+
+.secondaryCta:active {
+  transform: translateY(0.5px) scale(0.98);
+}
+
+
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 768px) {
+  .headline {
+    font-size: clamp(34px, 8.5vw, 44px);
+    line-height: 1.06;
+  }
+
+  .subtext {
+    font-size: 15px;
+    margin-bottom: var(--sp-6);
+    min-height: 124px; /* Stabilizes vertical height against varying typewriter strings for zero CLS */
+  }
+
+  @media (max-width: 350px) {
+    .subtext {
+      min-height: 146px;
+    }
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    gap: var(--sp-3);
+  }
+
+  .ctaGroup > * {
+    width: 100%;
+  }
+
+
+  /* Responsive star scaling for mobile viewport */
+  .sparkle1 {
+    width: 20px;
+    height: 20px;
+    top: -14px;
+    right: -12px;
+  }
+
+  .sparkle2 {
+    width: 17px;
+    height: 17px;
+    top: -12px;
+    left: -14px;
+  }
+
+  .sparkle3 {
+    width: 14px;
+    height: 14px;
+    bottom: -6px;
+    right: -10px;
+  }
+
+  .sparkle4 {
+    width: 14px;
+    height: 14px;
+    top: -16px;
+  }
+}

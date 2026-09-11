@@ -1,0 +1,172 @@
+/**
+ * THEORLY DESIGN SYSTEM - TYPOGRAPHY
+ * Font: Sora — single typeface throughout the system.
+ */
+
+:root {
+  --font-family-primary: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-family-primary);
+  color: var(--text-primary);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Type Scale
+   ========================================================================== */
+
+/* Display - 72px / weight 800 / ls: -0.05em / lh: 1.00 */
+.display,
+h1.display {
+  font-family: var(--font-family-primary);
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.00;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* H1 - 40px / weight 800 / ls: -0.04em / lh: 1.08 */
+h1,
+.h1 {
+  font-family: var(--font-family-primary);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* H2 - 28px / weight 700 / ls: -0.03em / lh: 1.15 */
+h2,
+.h2 {
+  font-family: var(--font-family-primary);
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* H3 - 20px / weight 700 / ls: -0.02em / lh: 1.25 */
+h3,
+.h3 {
+  font-family: var(--font-family-primary);
+  font-size: clamp(18px, 2.5vw, 20px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* Body Large - 18px / weight 400 / lh: 1.65 */
+.body-lg {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* Body - 16px / weight 400 / lh: 1.65 */
+p,
+.body-md,
+.body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Small - 13px / weight 400 / lh: 1.55 */
+.body-sm,
+small {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* Label - 11px / weight 700 / ls: 0.10em / uppercase */
+.label,
+.type-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* Button - 14px / weight 700 / ls: -0.01em */
+.btn-text {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Metadata - 11px / weight 500 / color: tertiary */
+.metadata {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+/* ==========================================================================
+   Graphic Language & Editorial Highlights
+   ========================================================================== */
+
+/* Accent word highlight: max 1 highlighted term per headline */
+.accent-highlight {
+  position: relative;
+  display: inline-block;
+  color: var(--text-primary);
+  background: linear-gradient(180deg, transparent 62%, var(--accent) 62%, var(--accent) 92%, transparent 92%);
+}
+
+/* Lime underline */
+.lime-underline {
+  position: relative;
+  display: inline;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+/* Section Rhythm Standard:
+   Label first (small, uppercase) -> Headline (H2/H1) -> Supporting body (16–18px, max 540px wide) */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-12);
+}
+
+.section-header.centered {
+  align-items: center;
+  text-align: center;
+}
+
+.section-header .section-body {
+  max-width: 540px;
+}
+
+@media (max-width: 599px) {
+  .section-header {
+    margin-bottom: var(--sp-8);
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+}

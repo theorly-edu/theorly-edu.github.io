@@ -1,0 +1,197 @@
+.sectionWrapper {
+  padding-top: 64px;
+  padding-bottom: 84px;
+  background-color: var(--dark-bg);
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaCard {
+  background: var(--dark-surface);
+  border: 1.5px solid var(--dark-border);
+  border-radius: var(--radius-lg);
+  padding: 44px var(--sp-8);
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+  box-shadow: var(--shadow-product);
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 480ms cubic-bezier(0.16, 1, 0.3, 1), transform 480ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revealed .ctaCard {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.topStatusRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1) 60ms, transform 400ms cubic-bezier(0.16, 1, 0.3, 1) 60ms;
+}
+
+.revealed .topStatusRow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.headline {
+  font-family: var(--font-family-primary);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: #FFFFFF;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 420ms cubic-bezier(0.16, 1, 0.3, 1) 140ms, transform 420ms cubic-bezier(0.16, 1, 0.3, 1) 140ms;
+}
+
+.revealed .headline {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #A8ACA0;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 420ms cubic-bezier(0.16, 1, 0.3, 1) 220ms, transform 420ms cubic-bezier(0.16, 1, 0.3, 1) 220ms;
+}
+
+.revealed .desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.outcomeChipsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 420ms cubic-bezier(0.16, 1, 0.3, 1) 300ms, transform 420ms cubic-bezier(0.16, 1, 0.3, 1) 300ms;
+}
+
+.revealed .outcomeChipsRow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.outcomeChip {
+  font-size: 12px;
+  font-weight: 600;
+  color: #D4D8CE;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--dark-border);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color var(--dur-micro) var(--ease-out),
+              background-color var(--dur-micro) var(--ease-out),
+              transform var(--dur-micro) var(--ease-out),
+              color var(--dur-micro) var(--ease-out);
+  user-select: none;
+}
+
+@media (hover: hover) {
+  .outcomeChip:hover {
+    border-color: rgba(198, 255, 40, 0.45);
+    background-color: rgba(0, 0, 0, 0.48);
+    transform: translateY(-1px);
+    color: #FFFFFF;
+  }
+}
+
+.ctaButtonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--sp-2);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 420ms cubic-bezier(0.16, 1, 0.3, 1) 380ms, transform 420ms cubic-bezier(0.16, 1, 0.3, 1) 380ms;
+}
+
+.revealed .ctaButtonWrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtle single payoff pulse on reveal to invite the click */
+@keyframes ctaButtonInvite {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 6px rgba(198, 255, 40, 0.25), 0 8px 24px rgba(198, 255, 40, 0.3);
+  }
+  70% {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 3px rgba(198, 255, 40, 0.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.revealed .ctaButtonWrapper a {
+  animation: ctaButtonInvite 750ms cubic-bezier(0.16, 1, 0.3, 1) 700ms 1;
+}
+
+.note {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #7A7D74;
+  opacity: 0;
+  transition: opacity 420ms var(--ease-entrance) 460ms;
+}
+
+.revealed .note {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .ctaCard {
+    padding: var(--sp-8) var(--sp-4);
+  }
+
+  .ctaButtonWrapper {
+    width: 100%;
+  }
+
+  .ctaButtonWrapper a {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .revealed .ctaButtonWrapper a {
+    animation: none !important;
+  }
+}

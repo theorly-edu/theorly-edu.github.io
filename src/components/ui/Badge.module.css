@@ -1,0 +1,75 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-1);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-family-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1.3;
+  box-sizing: border-box;
+}
+
+/* Active (Lime Accent) */
+.active {
+  background-color: var(--accent);
+  color: var(--text-primary);
+  border: 1px solid var(--accent);
+}
+
+/* Inactive (Neutral Surface Alt) */
+.inactive {
+  background-color: var(--surface-alt);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+/* Dark mode badge */
+.dark {
+  background-color: var(--dark-surface);
+  color: var(--accent);
+  border: 1px solid var(--dark-border);
+}
+
+/* Subject Badges (Exclusive use of secondary colors per design rules) */
+.blue {
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+}
+
+.orange {
+  background-color: #FFF7ED;
+  color: #C2410C;
+  border: 1px solid #FED7AA;
+}
+
+.purple {
+  background-color: #F5F3FF;
+  color: #6D28D9;
+  border: 1px solid #DDD6FE;
+}
+
+/* Semantic */
+.success {
+  background-color: #F0FDF4;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+}
+
+.warning {
+  background-color: #FFFBEB;
+  color: #B45309;
+  border: 1px solid #FDE68A;
+}
+
+.error {
+  background-color: #FEF2F2;
+  color: #B91C1C;
+  border: 1px solid #FECACA;
+}

@@ -1,0 +1,126 @@
+/**
+ * THEORLY DESIGN SYSTEM - DESIGN TOKENS
+ * Authoritative source of truth converted from THEORLY-DESIGN-SYSTEM.txt
+ */
+
+:root {
+  /* ==========================================================================
+     Core Color Tokens
+     65–75% neutral/off-white · 15–25% dark · 5–10% lime · Secondary colors sparse
+     ========================================================================== */
+  --bg: #F7F7F2;
+  --surface: #FFFFFF;
+  --surface-alt: #E9EDE3;
+  --text-primary: #11120D;
+  --text-secondary: #4A4D44;
+  --text-tertiary: #7A7D74;
+  --border: #D4D8CE;
+  --border-strong: #11120D;
+  --accent: #C6FF28;
+  --accent-soft: #EAFFA0;
+  --accent-dark: #8DB800;
+
+  /* Dark Sections & Product UI */
+  --dark-bg: #11120D;
+  --dark-surface: #1E1F19;
+  --dark-border: #2E3028;
+
+  /* Semantic Feedback */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+
+  /* Secondary Colors (Sparse: categories, data viz, specific content labels only) */
+  --blue: #3B82F6;
+  --orange: #F97316;
+  --purple: #8B5CF6;
+
+  /* ==========================================================================
+     Spacing Tokens
+     Scale: 4px base multiplier
+     ========================================================================== */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+  --sp-20: 80px;
+  --sp-24: 96px;
+  --sp-30: 120px;
+  --sp-40: 160px;
+
+  /* ==========================================================================
+     Radius Tokens
+     Max 20px anywhere. Never go to 24px+ on standard cards.
+     ========================================================================== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* ==========================================================================
+     Border Tokens
+     ========================================================================== */
+  --border-width: 1px;
+  --border-width-strong: 2px;
+
+  /* ==========================================================================
+     Shadow Tokens
+     ========================================================================== */
+  --shadow-subtle: 0 1px 3px rgba(17, 18, 13, 0.06), 0 1px 2px rgba(17, 18, 13, 0.04);
+  --shadow-card: 0 4px 12px rgba(17, 18, 13, 0.08), 0 2px 4px rgba(17, 18, 13, 0.04);
+  --shadow-lift: 0 8px 24px rgba(17, 18, 13, 0.10), 0 2px 6px rgba(17, 18, 13, 0.06);
+  --shadow-product: 0 20px 60px rgba(17, 18, 13, 0.14), 0 4px 16px rgba(17, 18, 13, 0.08);
+  --shadow-btn: 2px 2px 0px #11120D;
+
+  /* ==========================================================================
+     Motion Tokens
+     ========================================================================== */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-micro: 120ms;
+  --dur-std: 220ms;
+  --dur-large: 380ms;
+  --dur-entrance: 420ms;
+
+  /* ==========================================================================
+     Grid & Layout Tokens
+     ========================================================================== */
+  --page-max: 1200px;
+  --page-pad-desktop: 48px;
+  --page-pad-tablet: 32px;
+  --page-pad-mobile: 20px;
+  --section-spacing-desktop: 120px;
+  --section-spacing-tablet: 80px;
+  --section-spacing-mobile: 56px;
+
+  /* Current responsive page padding & section spacing */
+  --page-pad: var(--page-pad-desktop);
+  --section-spacing: var(--section-spacing-desktop);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-pad: var(--page-pad-tablet);
+    --section-spacing: var(--section-spacing-tablet);
+  }
+}
+
+@media (max-width: 599px) {
+  :root {
+    --page-pad: var(--page-pad-mobile);
+    --section-spacing: var(--section-spacing-mobile);
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --page-pad: 16px;
+    --page-pad-mobile: 16px;
+  }
+}

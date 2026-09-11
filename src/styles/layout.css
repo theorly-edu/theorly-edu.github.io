@@ -1,0 +1,218 @@
+/**
+ * THEORLY DESIGN SYSTEM - LAYOUT & GRID
+ */
+
+/* ==========================================================================
+   Base Container
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  box-sizing: border-box;
+}
+
+/* Fluid full container without max-width constraint */
+.container-fluid {
+  width: 100%;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Section Alternating Rhythm
+   Light (#F7F7F2) / Dark (#11120D) / Alt (#E9EDE3)
+   ========================================================================== */
+.section {
+  position: relative;
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+  box-sizing: border-box;
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+
+.section-light {
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+
+.section-surface {
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
+.section-alt {
+  background-color: var(--surface-alt);
+  color: var(--text-primary);
+}
+
+.section-dark {
+  background-color: var(--dark-bg);
+  color: #FFFFFF;
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark .h1,
+.section-dark .h2,
+.section-dark .h3 {
+  color: #FFFFFF;
+}
+
+.section-dark p,
+.section-dark .body-lg,
+.section-dark .body-md,
+.section-dark .body-sm {
+  color: #B5B9AF;
+}
+
+.section-dark .label {
+  color: var(--accent);
+}
+
+.hero-section {
+  padding-top: 160px;
+  padding-bottom: var(--section-spacing);
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 599px) {
+  .hero-section {
+    padding-top: 72px;
+  }
+}
+
+/* ==========================================================================
+   Blueprint Grid Pattern Background
+   "CSS: background-image: linear-gradient(rgba(17,18,13,0.06) 1px, transparent 1px),
+         linear-gradient(90deg, rgba(17,18,13,0.06) 1px, transparent 1px);
+         background-size: 32px 32px;"
+   ========================================================================== */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(17, 18, 13, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 18, 13, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.section-dark.bg-grid-pattern,
+.bg-grid-pattern-dark {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ==========================================================================
+   Grid System (12-Col Desktop / 8-Col Tablet / 4-Col Mobile)
+   ========================================================================== */
+.theorly-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--sp-4);
+  box-sizing: border-box;
+}
+
+/* Standard Layout Columns */
+.col-12 { grid-column: span 12; }
+.col-10 { grid-column: span 10; }
+.col-8  { grid-column: span 8; }
+.col-7  { grid-column: span 7; }
+.col-6  { grid-column: span 6; }
+.col-5  { grid-column: span 5; }
+.col-4  { grid-column: span 4; }
+.col-3  { grid-column: span 3; }
+.col-2  { grid-column: span 2; }
+.col-1  { grid-column: span 1; }
+
+/* 2-Column Split: 6+6, 5+7, 7+5 */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-8);
+  align-items: center;
+}
+
+.grid-2col-asym-left {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: var(--sp-8);
+  align-items: center;
+}
+
+.grid-2col-asym-right {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--sp-8);
+  align-items: center;
+}
+
+/* 3-Column Card Grid: 4+4+4 */
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+}
+
+/* 4-Column Grid */
+.grid-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-4);
+}
+
+@media (max-width: 900px) {
+  .theorly-grid {
+    grid-template-columns: repeat(8, 1fr);
+    gap: var(--sp-4);
+  }
+
+  .grid-2col,
+  .grid-2col-asym-left,
+  .grid-2col-asym-right {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-3);
+  }
+
+  .grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-3);
+  }
+
+  .col-8, .col-7, .col-6, .col-5, .col-4 {
+    grid-column: span 8;
+  }
+}
+
+@media (max-width: 599px) {
+  .theorly-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-3);
+  }
+
+  .grid-3col,
+  .grid-4col {
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+  }
+
+  .col-12, .col-10, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
+    grid-column: span 4;
+  }
+}
