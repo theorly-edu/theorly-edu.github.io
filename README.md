@@ -1,20 +1,55 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# THEORLY — Interactive Learning Platform (Ages 13–18)
 
-# Run and deploy your AI Studio app
+THEORLY is a modern, interactive learning platform designed for students in grades 8–12 to master Artificial Intelligence, Web Development, Cybersecurity, and future technology skills through hands-on projects and AI-guided mentorship.
 
-This contains everything you need to run your app locally.
+## Tech Stack
 
-View your app in AI Studio: https://ai.studio/apps/2ef7d676-c683-44f9-a130-37d3aafb3114
+- **Framework**: React 19
+- **Language**: TypeScript
+- **Styling**: CSS Modules + Design Tokens (CSS Custom Properties)
+- **Icons**: Lucide React
+- **Routing**: React Router v7
+- **Bundler & Dev Server**: Vite 6
 
-## Run Locally
+## Getting Started
 
-**Prerequisites:**  Node.js
+### Prerequisites
 
+- Node.js (v18 or later recommended)
+- npm
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Installation
+
+```bash
+npm install
+```
+
+### Development Server
+
+Start the local development server on port 3000:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production Build
+
+Type-check and build the production bundle:
+
+```bash
+npm run lint
+npm run build
+```
+
+The compiled static assets will be output to the `dist/` directory.
+
+### Preview Production Build
+
+Preview the generated production build locally:
+
+```bash
+npm run preview
+```
+
